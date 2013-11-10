@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+/* ----------------------- Footer section ------------------------- */
+#footer_section{
+	margin: 20px auto;
+	width: 1000px;
+	height: 30px;
+	background-color: #000000;
+	border-radius: 0px 0px 10px 10px;
+	clear:both;
+}
+#p_Footer{
+	clear:both;
+	text-align: center;
+}
