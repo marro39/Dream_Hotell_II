@@ -2,7 +2,7 @@
 body{
 	margin:0px;
 	padding:0px;
-	font-family:Tahoma;
+	font-family:Times New Roman;
 	color: #FCFFF0;
 	display:block;	
 	background-color:#FCFFF0;	
@@ -14,7 +14,7 @@ a{
 }
 /* ----------------------- Heading including hotel logo and navigation bar ------------------------- */ 
 #heading_section{
-	margin: 20px auto;
+	margin: 5px auto;
 	width: 1000px;
 	min-height: 120px;
 	background-color: #000000;
