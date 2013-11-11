@@ -6,7 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/templates/header.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/templates/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/home.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/login.css" />		
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/login.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/locate.css" />		
 	</head>
 	<body>
 		<nav>
@@ -19,7 +20,7 @@
 					<li class="liMainMenu"><a href="#">About</a>
 						<ul class="subNav">
 							<li class="liSubMenu"><a href="#">Contact</a></li>
-							<li class="liSubMenu"><a href="#">Locate</a></li>													
+							<li class="liSubMenu"><a href="<?php echo base_url()?>main/locate">Locate</a></li>													
 						</ul>
 					</li>					
 					<li class="liMainMenu"><a href="#">Administrate</a></li>

@@ -18,5 +18,11 @@ class Main extends CI_Controller {
 		$this->load->view('login');
 		$this->load->view('/templates/footer');
 	}
+	public function locate(){
+		$this->data['title'] = 'Hotel Dream II - Locate';
+		$this->load->view('/templates/header', $this->data);
+		$this->load->view('locate');
+		$this->load->view('/templates/footer');		
+	}
 }
 

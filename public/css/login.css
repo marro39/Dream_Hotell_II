@@ -1,6 +1,6 @@
 @CHARSET "ISO-8859-1";
 #sectionContent0{
-	margin: 5px auto;
+	margin: 4px auto;
 	width: 1000px;
 	min-height: 400px;
 	background-color: #000000;
@@ -13,7 +13,7 @@
 #inputContainer{
 	width:400px;
 	height:150px;
-	margin: 20px auto;		
+	margin: 5px auto;		
 }
 .redColor{
 	color: red;

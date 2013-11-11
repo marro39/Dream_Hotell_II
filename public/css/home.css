@@ -1,9 +1,9 @@
 @CHARSET "ISO-8859-1";
-#section_content1{
-	margin: 10px auto;
+#section_content1{	
 	width: 1000px;
 	min-height: 500px;
 	background-color: #000000;	
+	margin: 4px auto;
 }
 #section_heading {
 	text-align: center;
@@ -18,7 +18,7 @@
 	width: 990px;
 	min-height: 340px;	
 	/*border: 2px solid red;*/
-	margin: 20px auto;
+	margin: 4px auto;
 }
 #contPicRoom, #contPicInt, #contPicExt{
 	float:left;

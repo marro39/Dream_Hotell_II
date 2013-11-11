@@ -1,6 +1,6 @@
 		<section>
 			<div id="section_content1">
-				<h3 id="section_heading">Welcome dear guest!</h3>
+				<h3 id="section_heading" >Welcome dear guest!</h3>
 				<p id="content_text1">
 					We are happy to announce that in spring 2013 major renovations were made. <br />
 					Every room has been updated to match todays standard <br />
@@ -12,8 +12,7 @@
 					Please click the show tab in the menu to <br />
 					see this years performanses.
 				</p>				
-				<?php 
-					//print_r($test);
+				<?php 					
 					$roomExt=array();
 					$roomInt=array();
 					$roomHotell=array();
@@ -33,8 +32,7 @@
 							array_push($roomHotell, $room['picture']);
 						}						 
 					}													 
-				?>	
-						
+				?>						
 				<div id="contPictures">				
 					<div id="contPicExt" 
 						data-cycle-tile-count=20

@@ -1,0 +1,33 @@
+@CHARSET "ISO-8859-1";
+#locateContent{
+	margin: 4px auto;
+	width: 1000px;
+	min-height: 700px;
+	background-color: #000000;
+	border:1px solid red;
+}
+.displayCenter{
+	text-align: center;
+}
+#mainMapContainer{
+	width: 960px;
+	min-height: 500px;
+	border:1px solid red;
+	margin: 20px auto;	
+}
+#locateMap{
+	width: 400px;
+	height: 400px;
+	border:1px solid red;
+	margin: 20px 35px;	
+	display:inline-block;
+}
+#routeDescription{
+	width: 400px;
+	height: 400px;
+	border:1px solid red;
+	margin: 20px 35px;	
+	display: none;
+	background-color: white;
+	overflow:auto;
+}
