@@ -1,0 +1,55 @@
+@CHARSET "ISO-8859-1";
+#sectionContent0{
+	margin: 20px auto;
+	width: 1000px;
+	min-height: 400px;
+	background-color: #000000;
+	border:1px solid red;	
+}
+#headerTitle{
+	text-align: center;
+	padding-top: 10px;
+}
+#inputContainer{
+	width:400px;
+	height:150px;
+	margin: 20px auto;
+	border:1px solid red;	
+}
+.redColor{
+	color: red;
+}
+.labelInput{
+	text-align: right;
+	width:100px;
+	display:inline-block;
+}
+#showPassword{
+	display:inline;
+}
+.button0{
+	border-radius: 5px 5px 5px 5px;
+	width: 155px;
+	height: 25px;
+	background-color: #990000;
+	color: white;
+}
+#buttonSubmit{
+	margin-left:120px;
+	margin-top: 10px;
+}
+#createAccountContent{
+	width:400px;
+	height:150px;
+	margin: 20px auto;
+	border:1px solid red;
+}
+#createAccount{
+	font-size: 15px;	
+	color: #990000;
+}
+#pCreateAccount{
+	font-size: 12px;
+	color: white;
+	margin-left:90px;
+}

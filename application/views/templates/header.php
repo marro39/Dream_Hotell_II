@@ -5,7 +5,8 @@
 		<title><?php echo $title ?></title>	
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/templates/header.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/templates/footer.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/home.css" />		
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/home.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/login.css" />		
 	</head>
 	<body>
 		<nav>
@@ -22,7 +23,14 @@
 						</ul>
 					</li>					
 					<li class="liMainMenu"><a href="#">Administrate</a></li>
-					<li class="liMainMenu"><a href="#">Login</a></li>					
+					<?php
+						if(isset($_SESSION['Login'])){
+							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/logout\">Logout</a></li>";
+						}
+						else{
+							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/login\">Login</a></li>";
+						}
+					?>									
 				</ul>
 			</div>
 		</nav>
