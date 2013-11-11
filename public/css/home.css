@@ -24,9 +24,22 @@
 	float:left;
 	height:300px;
 	width: 300px;
-	margin: 15px;		
+	margin: 15px;
+	display:block;		
 }
 .hotelPictures{
 	height: 245px;
 	width: 280px;
 }
+.prevNextPic{
+	display:block;
+	margin: 10px auto;	
+	width: 140px;
+	border: 1px solid #FFFF66;
+}
+#next0, #next1, #next2, #prev0, #prev1, #prev2{	
+	display:inline;	
+	padding: 0 5px;
+	
+}
+

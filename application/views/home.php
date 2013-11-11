@@ -33,13 +33,20 @@
 							array_push($roomHotell, $room['picture']);
 						}						 
 					}													 
-				?>
+				?>	
+						
 				<div id="contPictures">				
 					<div id="contPicExt" 
-					data-cycle-tile-count=20
-					data-cycle-fx=tileBlind
-					data-cycle-tile-vertical=true
-				>						
+						data-cycle-tile-count=20
+						data-cycle-fx=tileBlind
+						data-cycle-tile-vertical=true
+						data-cycle-next="#next0"	
+						data-cycle-prev="#prev0"								
+					>	
+						<div class="prevNextPic">
+							<span id="prev0">&lt;&lt;Prev </span>
+	        				<span id="next0"> Next&gt;&gt;</span>
+	        			</div>												
 						<?php 
 							for ($i=0; $i < count($roomExt); $i++) { 
 								echo "<img class=\"hotelPictures\" src=\"" . base_url() . "public/img/" . $roomExt[$i] . "jpg\" alt=\"" . base_url() . "public/img/" . $roomExt[$i] . "jpg\"  />";
@@ -50,7 +57,13 @@
 						data-cycle-tile-count=20
 						data-cycle-fx=tileBlind
 						data-cycle-tile-vertical=true
+						data-cycle-next="#next1"	
+						data-cycle-prev="#prev1"
 					>
+						<div class="prevNextPic">
+							<span id="prev1">&lt;&lt;Prev </span>
+	        				<span id="next1"> Next&gt;&gt;</span>
+	        			</div>
 						<?php 
 							for ($i=0; $i < count($roomInt); $i++) { 
 								echo "<img class=\"hotelPictures\" src=\"" . base_url() . "public/img/" . $roomInt[$i] . "jpg\" alt=\"" . base_url() . "public/img/" . $roomInt[$i] . ".jpg\"  />";
@@ -61,7 +74,13 @@
 						data-cycle-tile-count=20
 						data-cycle-fx=tileBlind
 						data-cycle-tile-vertical=true
+						data-cycle-next="#next2"	
+						data-cycle-prev="#prev2"
 					>
+						<div class="prevNextPic">
+							<span id="prev2">&lt;&lt;Prev </span>
+	        				<span id="next2"> Next&gt;&gt;</span>
+	        			</div>
 						<?php						
 							for ($i=0; $i < count($roomHotell); $i++) { 
 								echo "<img class=\"hotelPictures\" src=\"" . base_url() . "public/img/" . $roomHotell[$i] . ".jpg\" alt=\"" . base_url() . "public/img/" . $roomHotell[$i] . ".jpg\" />";
