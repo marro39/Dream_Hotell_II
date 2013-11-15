@@ -15,26 +15,27 @@
 				<img id="imageLogo" src="<?php echo base_url()?>public/img/cLogo.jpg" alt="Dream Hotell II"/>				
 				<h2 id="headingTitle">Hotell Dream II</h2>
 				<ul id="mainNav">
-					<li class="liMainMenu"><a href="<?php echo base_url()?>main">Home</a></li>
-					<li class="liMainMenu"><a href="#">Booking</a></li>
-					<li class="liMainMenu"><a href="#">About</a>
+					<li class="liMainMenu"><a href="<?php echo base_url()?>main" >Home</a></li>
+					<li class="liMainMenu"><a href="#" >Booking</a></li>
+					<li class="liMainMenu"><a href="#" >About</a>
 						<ul class="subNav">
-							<li class="liSubMenu"><a href="#">Contact</a></li>
-							<li class="liSubMenu"><a href="<?php echo base_url()?>main/locate">Locate</a></li>													
+							<li class="liSubMenu"><a href="#" >Contact</a></li>
+							<li class="liSubMenu"><a href="<?php echo base_url()?>main/locate" >Locate</a></li>													
 						</ul>
 					</li>					
-					<li class="liMainMenu"><a href="#">Administrate</a></li>
+					<li class="liMainMenu"><a href="#" >Administrate</a></li>
 					<?php
 						if(isset($_SESSION['Login'])){
-							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/logout\">Logout</a></li>";
+							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/logout\" >Logout</a></li>";
 						}
 						else{
-							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/login\">Login</a></li>";
+							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/login\" >Login</a></li>";
 						}
 					?>									
 				</ul>
 			</div>
 		</nav>
+		<span id="spanMenuMarked" name="<?php echo $navMenuClicked ?>"><?php echo $navMenuClicked ?></span>
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/jQuery.js"></script>
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/header/header.js"></script>
 	
