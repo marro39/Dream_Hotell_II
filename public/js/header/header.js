@@ -1,5 +1,6 @@
 $(document).ready(function(){
-	var menuMarked= $('#spanMenuMarked').attr('name');
+	//var menuMarked= $('#spanMenuMarked').attr('name');
+	var menuMarked= $('#spanMenuMarked').attr('data-menuClicked');
 	var homeadress='http://localhost/Dream_Hotell_II/main';
 	//If homeadress is false the menu will have default color
 	var bHomeAdress=false;

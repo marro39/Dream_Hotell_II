@@ -2,7 +2,7 @@
 #sectionContent0{
 	margin: 4px auto;
 	width: 1000px;
-	min-height: 400px;
+	height: 350px;
 	background-color: #000000;
 	border:1px solid red;	
 }
@@ -51,4 +51,8 @@
 	font-size: 12px;
 	color: white;
 	margin-left:125px;
+}
+.error{
+	margin-left:150px;
+	color: red;
 }

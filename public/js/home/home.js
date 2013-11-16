@@ -1,5 +1,4 @@
-$(document).ready(function(){
-		alert('In home page!');
+$(document).ready(function(){		
 		$('#contPicExt').cycle({
 			
 		});

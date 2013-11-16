@@ -27,5 +27,33 @@ class Main extends CI_Controller {
 		$this->load->view('locate');
 		$this->load->view('/templates/footer');		
 	}
+	public function createAccount(){
+		$this->load->library('form_validation');
+		//$this->load->library('../controllers/main');
+		//Set rules automatically escapes bad characters!
+		$this->form_validation->set_rules('email1','Email','required|trim|xss_clean|min_length[3]|max_length[30]|valid_email');
+		$this->form_validation->set_rules('password1','Password','required|trim|xss_clean|matches[password2]|min_length[5]|max_length[30]');
+		$this->form_validation->set_rules('firstName','Firstname','trim|xss_clean|min_length[3]|max_length[30]');
+		$this->form_validation->set_rules('lastName','Lastname','trim|xss_clean|min_length[3]|max_length[30]');			
+		if($this->form_validation->run()){			
+			$this->index();
+		}
+		else{
+			$this->login();
+		}
+	}
+	public function logInUser(){		
+		$this->load->library('form_validation');
+		//$this->load->library('../controllers/main');
+		//Set rules automatically escapes bad characters!
+		$this->form_validation->set_rules('email','Email','required|trim|xss_clean|valid_email|min_length[3]|max_length[30]');
+		$this->form_validation->set_rules('password','Password','required|trim|xss_clean');			
+		if($this->form_validation->run()){			
+			$this->index();
+		}
+		else{
+			$this->login();
+		}
+	}
 }
 

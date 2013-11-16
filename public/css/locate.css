@@ -11,8 +11,7 @@
 }
 #mainMapContainer{
 	width: 960px;
-	min-height: 500px;
-	border:1px solid red;
+	min-height: 500px;	
 	margin: 20px auto;	
 }
 #locateMap{

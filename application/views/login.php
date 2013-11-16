@@ -1,13 +1,22 @@
 <section>
-		<div id="sectionContent0">
+		<div id="sectionContent0">			
 			<h2 id="headerTitle">Login</h2>
 			<div id="inputContainer">
-				<?php echo form_open('main/login'); ?>				
+				<?php 
+					//echo form_open('login/logInUser');
+					echo form_open('main/logInUser'); 
+					echo validation_errors('<p class="error" >');					
+				?>									
 					<label for="email" class="labelInput">Email:</label>
-					<span class="redColor"> *</span>
-					
-					<input type="email" name="email" id="email" value="someone@hotmail.com"/><br />
-					
+					<span class="redColor"> *</span>					
+					<?php 
+						$emailData=array(
+							'name' => 'email',
+							'id' => 'email',
+							'value' => set_value('email')
+						);
+						echo form_input($emailData);
+					?>
 					<label for="password" class='labelInput'>Password:</label>
 					<span class="redColor"> *</span>
 					
@@ -15,7 +24,8 @@
 						$passwordData=array(
 							'name' => 'password',
 							'id' => 'password',
-							'class' => 'password'						
+							'class' => 'password',
+							'value' => set_value('password')													
 						);
 						echo form_password($passwordData);						
 					?>
@@ -33,29 +43,44 @@
 					<p id="pCreateAccount">Click <a href="#" id="createAccount">here</a> to create a new account</p>
 			</div>
 			<div id="createAccountContent">
-				<?php echo form_open('main/createAccount');?>
-				<label for="firstName" class="labelInput">Firstname:</label><span class="redColor">&nbsp&nbsp&nbsp</span>
+				<?php 
+					//echo form_open('login/createAccount');
+					echo form_open('main/createAccount');
+					//Validation_errors function is not part of form_validation! It is part of form_helper
+					echo validation_errors('<p class="error" >');
+				?>				
+				<label for="firstName" class="labelInput">Firstname:</label><span class="redColor">&nbsp;&nbsp;&nbsp;</span>
 				<?php					
 					
 					$firstName=array(
 						'id' => 'firstName',
 						'name' => 'firstName',
-						'class'=> ''						
+						'class'=> '',
+						'value' => set_value('firstName')						
 					);
 					echo form_input($firstName);
 				?>
-				<br /><label for="lastName" class="labelInput">Lastname:</label><span class="redColor">&nbsp&nbsp&nbsp</span>
+				<br /><label for="lastName" class="labelInput">Lastname:</label><span class="redColor">&nbsp;&nbsp;&nbsp;</span>
 				<?php					
 					$lastName=array(
 						'id' => 'lastName',
 						'name' => 'lastName',
-						'class'=> ''						
+						'class'=> '',
+						'value' => set_value('lastName')						
 					);
 					echo form_input($lastName);
 				?>
-				<br /><label for="email1" class="labelInput">Username:</label><span class="redColor"> *</span>
-				<input type="email" name="email1" id="email1" value="someone@hotmail.com"/>
-				<br /><label for="newPassword" class="labelInput">Password:</label><span class="redColor"> *</span>
+				<br /><label for="email1" class="labelInput">Email:</label><span class="redColor"> *</span>				
+				<?php 
+					$emailData1=array(
+						'name' => 'email1',
+						'id' => 'email1',
+						'value' => set_value('email1')
+					);
+					echo form_input($emailData1);
+				?>
+				
+				<br /><label for="password1" class="labelInput">Password:</label><span class="redColor"> *</span>
 				<?php 
 					$passwordData1=array(
 						'id' => 'password1',
@@ -65,7 +90,7 @@
 					echo form_password($passwordData1);
 				?>
 				<input type="checkbox" class="showPassword"/>
-				<br /><label for="newPasswordCheck" class="labelInput">Repeat password:</label><span class="redColor"> *</span>
+				<br /><label for="password2" class="labelInput">Repeat password:</label><span class="redColor"> *</span>
 				<?php 
 					$passwordData2=array(
 						'id' => 'password2',
@@ -80,13 +105,11 @@
 							'value' => 'Apply'						
 						);
 						echo form_submit($submitData1);
-				?>
-				
+				?>				
 				<?php
 					echo form_close();
-				?>
-				
-			</div>		
+				?>				
+			</div>				
 		</div>			
 </section>
 <aside></aside>

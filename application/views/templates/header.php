@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<nav>
-			<div id="heading_section">
+			<div id="heading_section">				
 				<img id="imageLogo" src="<?php echo base_url()?>public/img/cLogo.jpg" alt="Dream Hotell II"/>				
 				<h2 id="headingTitle">Hotell Dream II</h2>
 				<ul id="mainNav">
@@ -32,10 +32,10 @@
 							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/login\" >Login</a></li>";
 						}
 					?>									
-				</ul>
+				</ul>				
+				<span id="spanMenuMarked" data-menuClicked="<?php echo $navMenuClicked ?>"></span>
 			</div>
-		</nav>
-		<span id="spanMenuMarked" name="<?php echo $navMenuClicked ?>"><?php echo $navMenuClicked ?></span>
+		</nav>		
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/jQuery.js"></script>
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/header/header.js"></script>
 	
