@@ -45,14 +45,26 @@ class Main extends CI_Controller {
 	public function logInUser(){		
 		$this->load->library('form_validation');
 		//$this->load->library('../controllers/main');
-		//Set rules automatically escapes bad characters!
+		//Set rules automatically escapes bad characters!		
 		$this->form_validation->set_rules('email','Email','required|trim|xss_clean|valid_email|min_length[3]|max_length[30]');
-		$this->form_validation->set_rules('password','Password','required|trim|xss_clean');			
+		$this->form_validation->set_rules('password','Password','required|trim|xss_clean|callback_validateUser');		
+		//Check if library exists!
+		//echo (function_exists('mcrypt_encrypt') ? 'It exists' : 'Nope');		
 		if($this->form_validation->run()){			
 			$this->index();
 		}
 		else{
 			$this->login();
+		}
+	}
+	public function validateUser(){
+		$this->load->model('manageUser');
+		if($this->manageUser->userLogin()){
+			return true;
+		}
+		else{
+			$this->form_validation->set_message('validateUser','Incorrect email/password!');
+			return false;
 		}
 	}
 }

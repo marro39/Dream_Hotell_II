@@ -6,11 +6,11 @@ $(document).ready(function(){
 		
 		if(type =='password'){
 			$('.password').attr('type','text');
-			alert('Password');
+			//alert('Password');
 		}
 		else{
 			$('.password').attr('type','password');
-			alert('Text');
+			//alert('Text');
 		}
 		
 	});
