@@ -4,6 +4,9 @@
 			<div id="inputContainer">
 				<?php 
 					//echo form_open('login/logInUser');
+					if(!empty($accountCreated)){
+						echo "<h3 id='accountCreated'>" . $accountCreated . "</h3>";						
+					}
 					echo form_open('main/logInUser'); 
 					echo validation_errors('<p class="error" >');					
 				?>									

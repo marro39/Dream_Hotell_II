@@ -25,8 +25,8 @@
 					</li>					
 					<li class="liMainMenu"><a href="#" >Administrate</a></li>
 					<?php
-						if(isset($_SESSION['Login'])){
-							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/logout\" >Logout</a></li>";
+						if($this->session->userdata('loggedIn')){
+							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/login\" >Logout</a></li>";
 						}
 						else{
 							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/login\" >Login</a></li>";
