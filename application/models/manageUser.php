@@ -37,9 +37,11 @@ class ManageUser extends CI_Model{
 			echo $row->access_level . "<br />";				
 			*/
 			$userdata=array(
-				'loggedIn' => 1,
-				'email' => $email,
-				'password' => $password
+				'firstName' => $row->firstname,
+				'lastName' => $row->lastname,
+				'access_level' => $row->access_level,				
+				'email' => $row->email,
+				'password' => $row->password
 			);
 			$this->session->set_userdata($userdata);			
 			return true;			

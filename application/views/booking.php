@@ -52,6 +52,30 @@
 			</div>
 		</article>		
 	</div>	
+	<div id="result_booking">
+		<p id="bookingMessage"></p>
+		<h2>Aviliable rooms for your search</h2>		
+		<div id="roomBookingCont">
+			<article>
+				<table id="tableRooms">
+					<thead>
+						<tr>
+							<td>Room Id</td><td>Room number</td><td>Balcony</td><td>Suite</td><td>Beds</td><td>Bathrooms</td><td>Floor</td><td>Select room</td>
+						</tr>
+					</thead>
+					<tbody>
+					
+					</tbody>
+				</table>
+				<div id="buttonBookRoomCont">
+					<input type="button" id="bookRoom" value="Book room" class="button" />					
+				</div>
+				<div id="linkBookRoomCont">
+					<p>Click <a href="#" id="newSearchBooking">here</a> if you want to search again!</p>
+				</div>
+			</article>
+		</div>
+	</div>
 </section>
 <aside></aside>	
 <script type="text/javascript" src="<?php echo base_url()?>public/js/booking/booking.js"></script>	

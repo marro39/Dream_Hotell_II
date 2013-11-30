@@ -114,7 +114,15 @@ class Main extends CI_Controller {
 		}
 		else{
 			echo 'error';
-		}
+		}		
+	}
+	//------------------------------Search for aviliable rooms----------------------------------
+	public function searchRooms(){						
+		$this->load->model('ajax_handler');
+		echo $this->ajax_handler->searchAviliableRooms();		
+		
+		
+		
 		
 	}
 }

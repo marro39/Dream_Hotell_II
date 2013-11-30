@@ -40,15 +40,55 @@ $(document).ready(function(){
 					maxDate:'+1y',
 					minDate:1										
 				});
-				$('#bookingToCont').datepicker({
+				$('#bookingToCal').datepicker({
 					dateFormat:'yy-mm-dd',
 					maxDate:'+1y',
 					minDate:2					
 				});
 			});
 		});
-		$('#buttonSearchRoom').click(function(){
-			alert('Send');
+		$('#buttonSearchRoom').click(function(){			
+			$('#result_booking').slideDown(function(){
+				$('#articleBooking2').slideUp();				
+				var fromDate=$.trim($('#bookingFromCal').val() + " 00:00:00");
+				var toDate=$.trim($('#bookingToCal').val() + " 00:00:00");
+				$('#tableRooms tbody').empty();
+				$.ajax({
+					type:'POST',
+					url:'../main/searchRooms',
+					dataType: 'json',
+					data:{
+						'fromDate':fromDate,
+						'toDate':toDate
+					},
+					success:function(data){
+						//alert('Success1');
+						if(data == 'Failure'){
+							window.location = "/main/booking";
+							alert('something went wring');
+						}
+						else{						
+							//$('#roomResultStatus').text('Results:');
+							$('#tableRooms tbody').empty();
+							//First sweep through all properties in data. Every property is an object. Then get the properties 
+							//of each objRoom!
+							for( var objRoom in data){
+								//alert(objRoom.length)
+								$('#tableRooms tbody').append("<tr><td>" + data[objRoom].roomId + "</td><td>" + data[objRoom].roomNumber + "</td><td>" + data[objRoom].balcony + "</td><td>" + data[objRoom].suite + "</td><td>" + data[objRoom].beds + "</td><td>" + data[objRoom].bathroomNumber + "</td><td>" + data[objRoom].floor + "</td><td><input type='radio' id='roomSelector' value=" + data[objRoom].roomId + " name='roomSelect'></input></td></tr>");							
+							}						
+							$('#buttonBookRoom').remove();
+							$('#roomSearchResult').append("<input type='button' id='buttonBookRoom' value='Book selected room' class='button'></input>")
+							$("input:radio[name=roomSelect]:first").attr('checked', true);
+						}
+					}							
+				}).error(function(){					
+					$('#bookingMessage').text('Something went wrong, please try again');											
+				});				
+				$('#newSearchBooking').click(function(){
+					$('#result_booking').slideUp();
+					$('#articleBooking2').slideDown();					
+				});
+			});			
 		});
 	});
 });

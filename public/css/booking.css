@@ -99,4 +99,50 @@
 	height: 30px;
 	margin:auto;	
 }
+/*----------------------------------------------------Results section of booking-----------------------------------------*/
+#result_booking{
+	width: 900px;
+	height: 600px;
+	overflow:auto;	
+	display: none;
+	margin: 0px auto;
+}
+#bookingMessage{
+	text-align:center;
+	color:red;
+}
+#roomBookingCont{
+	height: 500px;
+	width: 650px;
+	margin: 0px auto;	
+}
+#tableRooms, #tableRooms td{
+	border:1px solid white;	
+}
+#tableRooms td{
+	padding-left: 10px;
+	padding-right:10px;
+	text-align:center;
+}
+#bookRoom{	
+	font-size: 20px;
+	margin: 10px auto;	
+}
+h2{
+	text-align:center;
+}
+#newSearchBooking{
+	color:red;
+	text-align:center;
+}
+#buttonBookRoomCont{
+	margin: 10px auto;	
+	width:120px;
+	height:40px;	
+}
+#linkBookRoomCont{
+	height:50px;
+	width:250px;	
+	margin: 10px auto;	
+}
 	
