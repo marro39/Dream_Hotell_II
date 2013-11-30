@@ -93,8 +93,4 @@
 			</div>
 		</section>
 		<aside></aside>		
-		<script type="text/javascript" src="<?php echo base_url()?>public/js/cycle2.js"></script>
-		<script type="text/javascript" src="<?php echo base_url()?>public/js/home/home.js"></script>
-		<script type="text/javascript" src="<?php echo base_url()?>public\js\jquery.cycle2.tile.min.js"></script>		
-		
-		
+		<script type="text/javascript" src="<?php echo base_url()?>public/js/home/home.js"></script>		

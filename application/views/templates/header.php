@@ -7,7 +7,10 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/templates/footer.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/home.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/login.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/locate.css" />		
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/locate.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/booking.css" />	
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/colorbox/colorbox.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/ui-lightness/uiCustom.css" />		
 	</head>
 	<body>
 		<nav>
@@ -16,7 +19,7 @@
 				<h2 id="headingTitle">Hotell Dream II</h2>
 				<ul id="mainNav">
 					<li class="liMainMenu"><a href="<?php echo base_url()?>main" >Home</a></li>
-					<li class="liMainMenu"><a href="#" >Booking</a></li>
+					<li class="liMainMenu"><a href="<?php echo base_url()?>main/booking" >Booking</a></li>
 					<li class="liMainMenu"><a href="#" >About</a>
 						<ul class="subNav">
 							<li class="liSubMenu"><a href="#" >Contact</a></li>
@@ -38,6 +41,9 @@
 		</nav>		
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/jQuery.js"></script>
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/header/header.js"></script>
-	
+		<script type="text/javascript" src="<?php echo base_url()?>public/js/cycle2.js"></script>
+		<script type="text/javascript" src="<?php echo base_url()?>public/js/jquery.cycle2.tile.min.js"></script>
+		<script type="text/javascript" src="<?php echo base_url()?>public/js/colorbox/colorbox.js"></script>
+		<script type="text/javascript" src="<?php echo base_url()?>public/js/ui/uiCustom.js"></script>
 	
 	

@@ -98,5 +98,24 @@ class Main extends CI_Controller {
 			return false;
 		}
 	}
+	public function booking(){
+		$this->data['title'] = 'Hotel Dream II - Booking';
+		$this->data['navMenuClicked'] ='booking';	
+		$this->load->view('/templates/header', $this->data);
+		$this->load->view('booking');
+		$this->load->view('/templates/footer');	
+	}
+	public function getRooms(){
+		$this->load->model('ajax_handler');
+		//echo $this->ajax_handler->getRooms();
+		
+		if($rooms=$this->ajax_handler->getRooms()){
+			echo $rooms;
+		}
+		else{
+			echo 'error';
+		}
+		
+	}
 }
 

@@ -1,0 +1,102 @@
+@CHARSET "ISO-8859-1";
+#section_content_booking1{
+	width:1000px;
+	min-height: 600px;
+	/*border: 2px dashed red;*/
+	margin: 4px auto;
+	background-color: #000000; 
+}
+/* ------------------------------------------------------First part----------------------------------------------------------------------*/
+#articleBooking1{
+	display: block;
+	width: 980px;
+	height: 500px;
+	/*border: 2px dashed red;*/
+	margin: 4px auto;
+}
+#bookingText{
+	float:left;
+	width: 450px;
+	height: 300px;
+	/*border: 1px dashed red;*/
+	margin:5px 10px;
+	padding-left:5px;
+	padding-right:5px;
+	text-align: center;
+	padding-top: 10px;
+}
+#makeBooking{
+	color:red;
+}
+#bookingPictures{
+	float:left;	
+	width: 450px;
+	height: 300px;
+	/*border: 1px dashed red;*/
+	margin:5px 10px;
+	padding-top: 10px;	
+}
+#bookingFramePic{
+	width: 450px;
+	height:300px;
+	display:block;
+	/*border:1px solid yellow;*/
+	text-align: center;
+}
+.bookingImageRoom{
+	width:450px;
+	height:270px;	
+	/*border:1px solid green;*/
+}
+/* ------------------------------------------------------Second part----------------------------------------------------------------------*/
+#articleBooking2{
+	display: none;
+	width: 900px;
+	height: 500px;	
+	margin: 4px auto;
+}
+#bookingContinfo{
+	padding-top:10px;
+	text-align: center;
+	margin:auto;
+}
+#bookingFromToCont{	
+	width: 510px;
+	height:280px;
+	margin: 5px auto;
+	padding: 0px 5px;
+}
+#bookingFromCont{
+	float:left;
+	width:250px;
+	min-height:280px;			
+}
+#bookingToCont{
+	float:left;
+	width:250px;
+	min-height:280px;			
+}
+#bookingFromCont h3, #bookingToCont h3{
+	text-align: center;
+}
+.bookingCal div{	
+	font-size: 14px;	
+}
+.bookingCal h3{
+	font-size: 20px;
+}
+.bookingCal{
+	margin: 0px auto;
+}
+#buttonSearchRoom{	
+	font-size: 20px;	
+}
+.button{
+	border-radius:4px;
+}
+#bookingDivButton{
+	width: 150px;
+	height: 30px;
+	margin:auto;	
+}
+	

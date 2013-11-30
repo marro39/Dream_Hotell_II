@@ -5,7 +5,7 @@ body{
 	font-family:Times New Roman;
 	color: #FCFFF0;
 	display:block;
-	background-image: url('../../img/gray-background.jpg')	
+	background-image: url('../../img/blackred.jpg')	
 }
 a{
 	font-family:Tahoma;
@@ -19,7 +19,7 @@ a{
 	min-height: 120px;
 	background-color: #000000;
 	border-radius: 10px 10px 0px 0px;
-	border:1px solid red;	
+	/*border:1px solid red;*/	
 }
 #imageLogo{
 	height: 100px;
