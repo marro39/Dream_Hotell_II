@@ -28,7 +28,7 @@
 					</li>					
 					<li class="liMainMenu"><a href="#" >Administrate</a></li>
 					<?php
-						if($this->session->userdata('access_level') > 1){
+						if($this->session->userdata('access_level') >= 1){
 							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/login\" >Logout</a></li>";
 						}
 						else{

@@ -2,6 +2,7 @@
 
 class Main extends CI_Controller {
 	private $data=array();
+	private $fromDate, $toDate;
 	public function index(){		
 		$this->data['title'] = 'Hotel Dream II - Home';
 		$this->data['navMenuClicked'] ='main';				
@@ -119,11 +120,32 @@ class Main extends CI_Controller {
 	//------------------------------Search for aviliable rooms----------------------------------
 	public function searchRooms(){						
 		$this->load->model('ajax_handler');
+		$this->fromDate=$this->input->post('fromDate');
+		$this->toDate=$this->input->post('toDate');
 		echo $this->ajax_handler->searchAviliableRooms();		
-		
-		
-		
-		
 	}
+	public function bookRoom(){
+		$this->load->model('Model_Room');
+		/*
+		$roomData=array(
+			'fromDate' => $this->fromDate,
+			'toDate' => $this->toDate			
+		);
+		*/
+		
+		//if($this->Model_Room->bookSelectedRoom($roomData)){
+		if($this->Model_Room->bookSelectedRoom()){
+			echo json_encode('Succeded');
+		}
+		else{
+			
+		}
+		
+				
+	}
+	
+		
+		
+	
 }
 

@@ -1,4 +1,6 @@
 $(document).ready(function(){	
+	var fromDate;
+	var toDate;
 	//------------------------------------------------------Get all rooms!---------------------------------------------------------------	
 	$.ajax({
 		type: 'POST',		
@@ -50,8 +52,10 @@ $(document).ready(function(){
 		$('#buttonSearchRoom').click(function(){			
 			$('#result_booking').slideDown(function(){
 				$('#articleBooking2').slideUp();				
-				var fromDate=$.trim($('#bookingFromCal').val() + " 00:00:00");
-				var toDate=$.trim($('#bookingToCal').val() + " 00:00:00");
+				fromDate=$.trim($('#bookingFromCal').val() + " 00:00:00");
+				toDate=$.trim($('#bookingToCal').val() + " 00:00:00");
+				//alert(fromDate);
+				//alert(toDate);
 				$('#tableRooms tbody').empty();
 				$.ajax({
 					type:'POST',
@@ -77,7 +81,7 @@ $(document).ready(function(){
 								$('#tableRooms tbody').append("<tr><td>" + data[objRoom].roomId + "</td><td>" + data[objRoom].roomNumber + "</td><td>" + data[objRoom].balcony + "</td><td>" + data[objRoom].suite + "</td><td>" + data[objRoom].beds + "</td><td>" + data[objRoom].bathroomNumber + "</td><td>" + data[objRoom].floor + "</td><td><input type='radio' id='roomSelector' value=" + data[objRoom].roomId + " name='roomSelect'></input></td></tr>");							
 							}						
 							$('#buttonBookRoom').remove();
-							$('#roomSearchResult').append("<input type='button' id='buttonBookRoom' value='Book selected room' class='button'></input>")
+							$('#roomSearchResult').append("<input type='button' id='buttonBookRoom' value='Book selected room' class='button'></input>");
 							$("input:radio[name=roomSelect]:first").attr('checked', true);
 						}
 					}							
@@ -89,6 +93,28 @@ $(document).ready(function(){
 					$('#articleBooking2').slideDown();					
 				});
 			});			
+		});
+		$('#bookRoom').click(function(){
+			//alert($("input:radio[name='roomSelect']:checked").val());
+			//alert(fromDate);
+			//alert(toDate);
+			$.ajax({
+				type:'POST',
+				url:'../main/bookRoom',
+				dataType: 'json',
+				data:{
+					'roomId' : $("input:radio[name='roomSelect']:checked").val(),
+					'fromDate' : fromDate,
+					'toDate' : toDate
+				},
+				success:function(data){
+					alert('Successfully booked the room!');	
+					alert(data);
+				}
+			}).error(function(){					
+				$('#bookingMessage').text('Something went wrong booking wished roome, please try again');
+				
+			});
 		});
 	});
 });

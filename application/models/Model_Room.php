@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Model_Room extends CI_Model {
-    
+    private $fromDate, $toDate;
     function __construct()
     {
         // Call the Model constructor
@@ -39,5 +39,43 @@ class Model_Room extends CI_Model {
 		}
 		$this->db->close();
 		return $rooms;
+	}
+	//You have to declare the parameter for the function as an array!!!
+	//function bookSelectedRoom($arrayRoomData=array()){
+	function bookSelectedRoom(){			
+		if($this->session->userdata('access_level') >= 1){
+			//$this->fromDate=$arrayRoomData['fromDate'];			
+			//$this->toDate=$arrayRoomData['toDate'];			
+			
+			$dateFrom=date('Y-m-d H:i:s',strtotime($this->input->post('fromDate')));			
+			$dateTo=date('Y-m-d H:i:s',strtotime($this->input->post('toDate')));
+			
+			
+			$id=$this->input->post('roomId');
+			
+			$insertRoom=array(
+				'roomId' => $id,
+				'dateArrival' => $dateFrom,
+				'dateDeparture' => $dateTo,
+				'email' => $this->session->userdata('email'),
+				'access_level' => $this->session->userdata('access_level')
+			);
+			
+			$this->db->insert('tblbooking', $insertRoom);
+			 
+			return true;
+			/*
+			if($this->fromDate && $this->toDate){
+				return true;
+			}
+			else {
+				return false;
+			}
+			 
+			 */
+		}
+		else{
+			return false;
+		}
 	}
 }
