@@ -15,7 +15,7 @@ class Main extends CI_Controller {
 		$this->load->view('/templates/footer');					
 	}
 	public function login(){
-		if($this->session->userdata('loggedIn')){
+		if($this->session->userdata('access_level')){
 			$this->session->sess_destroy();
 			redirect('main/index');
 		}

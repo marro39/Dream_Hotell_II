@@ -107,13 +107,11 @@ $(document).ready(function(){
 					'fromDate' : fromDate,
 					'toDate' : toDate
 				},
-				success:function(data){
-					alert('Successfully booked the room!');	
-					alert(data);
+				success:function(data){					
+					$('#bookingMessage').text('Your order is set! Thanks for choosing Dream Hotel II').css('color','green');
 				}
 			}).error(function(){					
-				$('#bookingMessage').text('Something went wrong booking wished roome, please try again');
-				
+				$('#bookingMessage').text('Something went wrong booking wished roome, please try again');				
 			});
 		});
 	});

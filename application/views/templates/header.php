@@ -10,7 +10,8 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/locate.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/booking.css" />	
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/colorbox/colorbox.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/ui-lightness/uiCustom.css" />		
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/ui-lightness/uiCustom.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/administrate.css" />		
 	</head>
 	<body>
 		<nav>
@@ -26,8 +27,10 @@
 							<li class="liSubMenu"><a href="<?php echo base_url()?>main/locate" >Locate</a></li>													
 						</ul>
 					</li>					
-					<li class="liMainMenu"><a href="#" >Administrate</a></li>
 					<?php
+						if($this->session->userdata('access_level') == 3){
+							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() . "administrate/home\">Administrate</a></li>";	
+						}						
 						if($this->session->userdata('access_level') >= 1){
 							echo "<li class=\"liMainMenu\"><a href=\"" . base_url() .  "main/login\" >Logout</a></li>";
 						}

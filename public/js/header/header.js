@@ -14,7 +14,7 @@ $(document).ready(function(){
 				bHomeAdress=true;
 				$(this).data('menuClicked', true);
 			}
-			if(bHomeAdress==false){
+			else if(bHomeAdress==false){
 				$(this).css('color','#FFFF66');
 				$(this).data('menuClicked', true);
 			}			

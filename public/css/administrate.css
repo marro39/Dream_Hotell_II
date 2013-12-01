@@ -1,0 +1,102 @@
+@CHARSET "ISO-8859-1";
+#sectionAdministrate1{
+	width: 1000px;
+	height: 600px;
+	margin: 4px auto;	
+	background-color: #000000;	
+}
+h3{
+	text-align:center;
+	padding-top:10px;
+}
+#navContAdministrate{
+	width:870px;
+	min-height:100px;
+	/*border:1px solid red;*/
+	margin: 5px auto;
+}
+#menulistAdmin{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;	
+}
+#menulistAdmin li{
+	float: left;
+	margin:0px;
+	padding:0px;
+	width:170px;
+	height:20px;
+	border: 1px solid #FFFFFF;
+	text-align: center;		
+}
+#menulistAdmin li a{	
+	margin:0px;
+	padding: 0px 10px;	
+}
+#menulistAdmin ul{	
+	margin:0px;
+	padding:0px;
+	visibility:hidden;
+}
+#menulistAdmin ul li{	
+	display: block;
+	margin:0px;
+	padding:0px;
+}
+#menulistAdmin ul li a{
+	margin:0px;
+	padding: 0px 10px;
+	/*border:1px solid #1C94C4;*/
+}
+/*When hover on first ul set all anchors in second ul to white  */
+#menulistAdmin:hover ul li a{
+	color: #FFFFFF;
+}
+/*When hover on any li that exists within first ul set the second ul to visible*/
+#menulistAdmin li:hover ul{
+	visibility:visible;
+}
+/*When hover on li inside first ul the top li will go white and rest in second ul will stay white because you still hover over the 
+ first ul*/
+#menulistAdmin li:hover a{
+	color: #FFFF66;
+}
+/*When hover over a li in the second ul that anchor will turn to grey color*/
+#menulistAdmin ul li:hover a{
+	color: #707070;
+}
+
+
+
+/*
+.liAdmin{
+	float: left;
+	padding: 0px 10px;
+	margin:0px;	
+	text-align: center;
+}
+.liAdmin:hover{
+	background-color:#FBCB09;
+}
+
+.liAdmin ul:hover{
+	visibility:visible;
+}
+*/
+/*
+.liAdmin ul li{
+	margin:0px;
+	text-align: center;	
+	display:block;
+	
+}
+
+.liAdmin ul li a{
+	margin:0px;
+	text-align: center;	
+	display:block;
+	color:#000000; 
+}
+*/
+
+
