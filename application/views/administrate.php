@@ -1,12 +1,10 @@
-<div id="sectionAdministrate1">
-	<section>
+<div id="sectionAdministrate1">	
 		<h3>Administration</h3>
-		<div id="navContAdministrate">
-			<nav>
+		<div id="navContAdministrate">			
 				<ul id="menulistAdmin">
 					<li>
-						<a href="#">Users</a>
-						<ul>
+						<a href="#">Users</a><span class="downArrow">&#9660;</span>
+						<ul class="subOne">
 							<li>
 								<a href="#">Delete user</a>
 							</li>
@@ -18,11 +16,12 @@
 							</li>
 						</ul>
 					</li>
+					
 					<li>
-						<a href="#">Bookings</a>
-						<ul>
+						<a href="#">Bookings</a><span class="downArrow">&#9660;</span>
+						<ul class="subOne">
 							<li>
-								<a href="#">Edit/delete booking</a>
+								<a href="#" id="edit_delete_booking">Edit/delete booking</a>
 							</li>
 							<li>
 								<a href="#">Add booking</a>
@@ -30,8 +29,8 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#">Rooms</a>
-						<ul>
+						<a href="#">Rooms</a><span class="downArrow">&#9660;</span>
+						<ul class="subOne">
 							<li>
 								<a href="#">Add room</a>
 							</li>
@@ -41,14 +40,41 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#">Staff schedule</a>
+						<a href="#">Staff schedule</a><span class="downArrow">&#9660;</span>
+						<ul class="subOne">
+							<li>
+								<a href="#" id="#">Group one</a>									
+							</li>
+							<li>
+								<a href="#">Group two</a><span class="downArrow">&#9654;</span>									
+								<ul class="subTwo">
+									<li>
+										<a href="#">Add schedule</a>
+									</li>
+									<li>
+										<a href="#">Delete schedeul</a>
+									</li>
+									<li>
+										<a href="#">Update schedule</a>
+									</li>
+								</ul>									
+							</li>												
+							<li>
+								<a href="#">Group three</a>
+							</li>							
+						</ul>
 					</li>
 					<li>
-						<a href="#">Economy</a>
-					</li>
+						<a href="#">Economy</a><span class="downArrow">&#9660;</span>
+					</li>				
 				</ul>
-			</nav>
+			<div class="clear"></div>							
+		</div>	
+		<div id="edit_delete_booking_wrapper">
+			<p>HELLO WORLD</p>
 		</div>
-	</section>
 </div>
+
+	
+
 <script type="text/javascript" src="<?php echo base_url()?>public/js/administrate.js"></script>		

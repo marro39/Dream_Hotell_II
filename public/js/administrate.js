@@ -1,6 +1,7 @@
-<div><section>
-		<div id="sectionContent0">	
-		</div>			
-</section>
-<aside></aside>
-<script type="text/javascript" src="<?php echo base_url()?>public/js/login.js"></script>
+$(document).ready(function(){
+	$('#edit_delete_booking').click(function(){
+		$('#edit_delete_booking_wrapper').slideDown(function(){
+			
+		});
+	});
+});

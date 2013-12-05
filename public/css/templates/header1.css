@@ -1,0 +1,105 @@
+@CHARSET "ISO-8859-1";
+body{
+	margin:0px;
+	padding:0px;
+	font-family:Times New Roman;
+	color: #FCFFF0;
+	display:block;
+	background-image: url('../../img/blackred.jpg')	
+}
+a{
+	font-family:Tahoma;
+	color: #FCFFF0;
+	text-decoration:none;
+}
+/* ----------------------- Heading including hotel logo and navigation bar ------------------------- */ 
+#heading_section{
+	margin: 4px auto;
+	width: 1000px;
+	min-height: 130px;
+	background-color: #000000;
+	border-radius: 10px 10px 0px 0px;
+	/*border:1px solid red;*/	
+}
+#imageLogo{
+	height: 100px;
+	width: 100px;	
+	margin: 10px;
+	float:left;	
+}
+#titleAndMenu{
+	width:765px;
+	min-height:100px;	
+	margin:0px auto;	
+	line-height: 10px;
+	float:left;
+	margin-top:10px;	
+}
+#title{
+	display:block;
+	margin:0px auto;
+	height:40px;
+	width: 200px;	
+	clear:both;
+}
+#headingTitle{
+ 	text-align:center; 	 		 	
+}
+#titleAndMenu menu{
+	display:block;
+	height:100px;
+	width:300px;	
+	clear:both;	
+}
+#mainNav{	
+	clear:both;		
+	padding:0px;
+	margin:0px 10px;
+	padding-top: 5px;
+	list-style-type: none
+}
+.liMainMenu{
+	float:left;	
+	width:130px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+}
+.liMainMenu a{
+	width:130px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+	display:block;
+	border:1px solid #143270;
+	text-align:center;
+	line-height: 25px;
+}
+.subNav{	
+	position:relative;
+	display:none;
+	clear:both;	
+	list-style-type: none;	
+	background-color:#000000;
+	margin:0px;
+	padding:0px;	
+	min-height:50px;	
+}
+.liSubMenu{		
+	clear: both;	
+	display:block;
+	width:130px;
+	height:30px;	
+}
+.liSubMenu a{
+	border:1px solid #143270;	
+	width:130px;
+	height:30px;
+	margin:0px;
+	padding:0px;
+	display:block;
+}
+.dArrow{	
+	font-size: 14px;
+	position:relative;
+}
