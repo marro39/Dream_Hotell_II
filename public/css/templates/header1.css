@@ -16,16 +16,18 @@ a{
 #heading_section{
 	margin: 4px auto;
 	width: 1000px;
-	min-height: 130px;
+	min-height: 130px;	
 	background-color: #000000;
-	border-radius: 10px 10px 0px 0px;
+	border-radius: 10px 10px 0px 0px;	
+	/*Important! Overflow hidden will expand the div when the nested menu expands*/
+	overflow:hidden;
 	/*border:1px solid red;*/	
 }
 #imageLogo{
 	height: 100px;
 	width: 100px;	
 	margin: 10px;
-	float:left;	
+	float:left;		
 }
 #titleAndMenu{
 	width:765px;
@@ -47,23 +49,25 @@ a{
 }
 #titleAndMenu menu{
 	display:block;
-	height:100px;
-	width:300px;	
-	clear:both;	
+	height:100px;	
+	width:300px;		
 }
-#mainNav{	
-	clear:both;		
+#mainNav{		
 	padding:0px;
 	margin:0px 10px;
 	padding-top: 5px;
-	list-style-type: none
+	list-style-type: none;
+	min-height: 50px;	
 }
 .liMainMenu{
-	float:left;	
+	float:left;
+	/*display:inline-table;*/
 	width:130px;
-	height:30px;
+	/*Somehow I must set li to min-height! Perhaps its sets for all li*/
+	min-height:30px;
 	margin:0px;
-	padding:0px;
+	padding:0px;	
+	border:1px solid #143270;
 }
 .liMainMenu a{
 	width:130px;
@@ -74,19 +78,18 @@ a{
 	border:1px solid #143270;
 	text-align:center;
 	line-height: 25px;
+	clear:both;
 }
 .subNav{	
 	position:relative;
-	display:none;
-	clear:both;	
+	display:none;	
 	list-style-type: none;	
 	background-color:#000000;
 	margin:0px;
 	padding:0px;	
 	min-height:50px;	
 }
-.liSubMenu{		
-	clear: both;	
+.liSubMenu{				
 	display:block;
 	width:130px;
 	height:30px;	
@@ -97,9 +100,22 @@ a{
 	height:30px;
 	margin:0px;
 	padding:0px;
-	display:block;
+	display:block;	
 }
 .dArrow{	
 	font-size: 14px;
 	position:relative;
 }
+#container{
+	clear:both;
+}
+.clearfix:after{
+	content:".";
+	clear:both;
+	visibility:hidden;
+	display:block;
+	height:0px;
+}
+.clearfix{display:inline-block;}
+* html .clearfix{height:1%;}
+.clearfix{display:block;}

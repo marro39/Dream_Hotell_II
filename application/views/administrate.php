@@ -1,6 +1,8 @@
-<div id="sectionAdministrate1">	
-		<h3>Administration</h3>
-		<div id="navContAdministrate">			
+<section id="sectionAdministrate1">	
+		<header>
+			<h3>Administration</h3>
+		</header>
+		<nav id="navContAdministrate">			
 				<ul id="menulistAdmin">
 					<li>
 						<a href="#">Users</a><span class="downArrow">&#9660;</span>
@@ -15,8 +17,7 @@
 								<a href="#">Add user</a>
 							</li>
 						</ul>
-					</li>
-					
+					</li>					
 					<li>
 						<a href="#">Bookings</a><span class="downArrow">&#9660;</span>
 						<ul class="subOne">
@@ -69,12 +70,9 @@
 					</li>				
 				</ul>
 			<div class="clear"></div>							
-		</div>	
-		<div id="edit_delete_booking_wrapper">
+		</nav>		
+</section>
+<section id="edit_delete_booking_wrapper">
 			<p>HELLO WORLD</p>
-		</div>
-</div>
-
-	
-
+</section>
 <script type="text/javascript" src="<?php echo base_url()?>public/js/administrate.js"></script>		

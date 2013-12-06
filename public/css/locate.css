@@ -8,6 +8,7 @@
 }
 .displayCenter{
 	text-align: center;
+	padding-top:10px;
 }
 #mainMapContainer{
 	width: 960px;

@@ -1,8 +1,9 @@
 		<section>
-			<div id="section_content1">							
+			<article id="section_content1">							
 				<div id="textBlock">
-					<h3 id="section_heading" >Welcome dear guest!</h3>
-					
+					<header>
+						<h3 id="section_heading" >Welcome dear guest!
+					</h3></header>					
 					<p id="content_text1">
 						We are happy to announce that in spring 2013 major renovations were made. <br />
 						Every room has been updated to match todays standard <br />
@@ -35,8 +36,7 @@
 							array_push($roomHotell, $room['picture']);
 						}						 
 					}													 
-				?>						
-				
+				?>					
 				<div id="contPictures">				
 					<div id="contPicExt" 
 						data-cycle-tile-count=20
@@ -90,7 +90,7 @@
 						?>						
 					</div>					
 				</div>					
-			</div>
+			</article>
 		</section>
 		<aside></aside>		
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/home/home.js"></script>		
