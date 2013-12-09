@@ -7,8 +7,8 @@ class Main extends CI_Controller {
 		$this->data['title'] = 'Hotel Dream II - Home';
 		$this->data['navMenuClicked'] ='main';				
 		//Get all room picture names from database!
-		$this->load->model('Model_Room');
-		$roomPics['rooms']=$this->Model_Room->getRooms();
+		$this->load->model('model_Room');
+		$roomPics['rooms']=$this->model_Room->getRooms();
 		//echo count($rooms);		
 		$this->load->view('/templates/header', $this->data);
 		$this->load->view('home', $roomPics);		
@@ -125,7 +125,7 @@ class Main extends CI_Controller {
 		echo $this->ajax_handler->searchAviliableRooms();		
 	}
 	public function bookRoom(){
-		$this->load->model('Model_Room');
+		$this->load->model('model_Room');
 		/*
 		$roomData=array(
 			'fromDate' => $this->fromDate,
@@ -134,7 +134,7 @@ class Main extends CI_Controller {
 		*/
 		
 		//if($this->Model_Room->bookSelectedRoom($roomData)){
-		if($this->Model_Room->bookSelectedRoom()){
+		if($this->model_Room->bookSelectedRoom()){
 			echo json_encode('Succeded');
 		}
 		else{
