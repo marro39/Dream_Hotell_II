@@ -9,7 +9,7 @@ class Ajax_handler extends CI_Model {
     }
 	function getRooms(){
 		$rooms=array();		
-		if($query=$this->db->get('tblroomexample')){
+		if($query=$this->db->get('tblRoomExample')){
 			
 			foreach ( $query->result() as $room ) {
 	       		//echo $objExtRoom->picExt;
@@ -36,7 +36,7 @@ class Ajax_handler extends CI_Model {
 				redirect(main/booking);
 			}
 			else{				
-				$sSql="SELECT * FROM tblroom WHERE tblroom.roomId NOT IN (SELECT roomId FROM tblbooking WHERE ('" . $dateFrom . "' <= dateArrival AND '" . $dateTo . "' >= dateDeparture) OR ('" . $dateFrom . "' <= dateArrival AND '" . $dateTo . "' >= dateArrival) OR ('" . $dateFrom . "' <= dateDeparture AND '" . $dateTo . "' >= dateDeparture) OR ('" . $dateFrom . "'>= dateArrival AND '" . $dateTo . "' <= dateDeparture) )";
+				$sSql="SELECT * FROM tblRoom WHERE tblRoom.roomId NOT IN (SELECT roomId FROM tblBooking WHERE ('" . $dateFrom . "' <= dateArrival AND '" . $dateTo . "' >= dateDeparture) OR ('" . $dateFrom . "' <= dateArrival AND '" . $dateTo . "' >= dateArrival) OR ('" . $dateFrom . "' <= dateDeparture AND '" . $dateTo . "' >= dateDeparture) OR ('" . $dateFrom . "'>= dateArrival AND '" . $dateTo . "' <= dateDeparture) )";
 				$query=$this->db->query($sSql);
 				$aRooms=array();
 				foreach($query->result() as $room){

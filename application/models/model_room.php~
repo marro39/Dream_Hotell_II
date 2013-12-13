@@ -61,7 +61,7 @@ class Model_Room extends CI_Model {
 				'access_level' => $this->session->userdata('access_level')
 			);
 			
-			//$this->db->insert('tblBooking', $insertRoom);
+			$this->db->insert('tblBooking', $insertRoom);
 			 
 			return true;
 			/*

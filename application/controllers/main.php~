@@ -52,8 +52,8 @@ class Main extends CI_Controller {
 	}
 	//This function is called from createaccunt function. It`s a callback function
 	public function createUser(){
-		$this->load->model('manageUser');
-		if($this->manageUser->createUser()){
+		$this->load->model('manage_user');
+		if($this->manage_user->createUser()){
 			return true;
 		}
 		else
@@ -61,8 +61,8 @@ class Main extends CI_Controller {
 	}
 	//This function is called from an email link
 	public function confirmCreateAccount($key){		
-		$this->load->model('manageUser');		
-		if($this->manageUser->confirmCreateAccount($key)){
+		$this->load->model('manage_user');		
+		if($this->manage_user->confirmCreateAccount($key)){
 			$this->data['accountCreated']='* Account successfully created! *';
 			$this->login();
 		}
@@ -90,8 +90,8 @@ class Main extends CI_Controller {
 	}
 	//A callback function from method logInUser
 	public function validateUser(){
-		$this->load->model('manageUser');
-		if($this->manageUser->userLogin()){
+		$this->load->model('manage_user');
+		if($this->manage_user->userLogin()){
 			return true;
 		}
 		else{

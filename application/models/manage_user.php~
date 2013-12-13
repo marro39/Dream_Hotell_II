@@ -21,7 +21,7 @@ class Manage_user extends CI_Model{
 		$encryptEmail=$this->my_encryption->encode($email);		
 		$this->db->where('email',$encryptEmail);
 		$this->db->where('password',$encryptPassword);
-		$result=$this->db->get('tblperson');
+		$result=$this->db->get('tblPerson');
 		if($result->num_rows() == 1){			
 			$row=$result->row();			
 			/*
@@ -73,7 +73,7 @@ class Manage_user extends CI_Model{
 		*/
 			
 		//Check if user alreay exists, if one exists then abort
-		$query=$this->db->get('tblperson');		
+		$query=$this->db->get('tblPerson');		
 		foreach ( $query->result() as $row ) {
        		//echo "<br />Encrypted email: " . $row->email . "<br />";
        		//echo "<br />Decrypted email: " . $this->my_encryption->decrypt($row->email) . "<br />";       		
@@ -140,14 +140,14 @@ class Manage_user extends CI_Model{
 			$arrayUserEnteties['password']=$password;			
 			
 			//If match email a user already exists = abort!
-			$query=$this->db->get('tblperson');
+			$query=$this->db->get('tblPerson');
 			foreach ( $query->result() as $row ) {       			
        			if(strcmp($row->email,$email) == 0){
        				return false;
        			}         			
 			}
 			//A user dont exists, create a new user			
-			if($this->db->insert('tblperson',$arrayUserEnteties)){				
+			if($this->db->insert('tblPerson',$arrayUserEnteties)){				
 				//Delete all temporary users in table temp_users
 				if($this->db->empty_table('temp_users')){
 					return true;					
