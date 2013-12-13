@@ -14,13 +14,13 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/administrate.css" />		
 	</head>
 	<body>
-		<header id="heading_section">								
+		<nav id="heading_section">								
 			<img id="imageLogo" src="<?php echo base_url()?>public/img/cLogo.jpg" alt="Dream Hotell II"/>				
 			<div id="titleAndMenu">
 				<div id="title">
 					<h2 id="headingTitle">Hotell Dream II</h2>	
 				</div>					
-				<nav id="menu">
+				<div id="menu">
 					<ul id="mainNav">
 						<li class="liMainMenu"><a href="<?php echo base_url()?>main" >Home</a></li>
 						<li class="liMainMenu"><a href="<?php echo base_url()?>main/booking" >Booking</a></li>
@@ -43,9 +43,9 @@
 						?>								
 					</ul>										
 					<span id="spanMenuMarked" data-menuClicked="<?php echo $navMenuClicked ?>"></span>						
-				</nav>					
+				</div>					
 			</div>						
-		</header>		
+		</nav>		
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/jQuery.js"></script>
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/header/header1.js"></script>
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/cycle2.js"></script>
