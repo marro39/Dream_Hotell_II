@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" />
+		<!--For responsivenes the viewport tag must be included! -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title><?php echo $title ?></title>	
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/templates/header.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/templates/footer.css" />

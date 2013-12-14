@@ -14,7 +14,7 @@ a{
 }
 /* ----------------------- Heading including hotel logo and navigation bar ------------------------- */ 
 #heading_section{
-	margin: 4px auto;
+	margin: 0.5% auto;
 	width: 60%;
 	min-height: 130px;	
 	background-color: #000000;
@@ -59,7 +59,6 @@ a{
 
 #mainNav{		
 	/*padding:0px;*/
-	margin:0% auto;
 	/*padding-top: 5px;*/
 	padding:1% 0% 0% 0%;
 	list-style-type: none;
@@ -103,7 +102,7 @@ a{
 	width:100%;
 	height:30px;	
 	/*border:1px solid #143270;*/
-	margin:2% 0.2%;	
+	margin:0% 0.1% 1% 0.1%;	
 }
 .liSubMenu a{		
 	width:100%;
@@ -117,4 +116,29 @@ a{
 .dArrow{	
 	font-size: 87%;
 	position:relative;
+}
+/*----------------------------RESPONSIVE------------------------------------------*/
+@media only screen and (max-width:900px) and (min-width:150px){
+	#heading_section{	
+	width: 100%;
+	padding-left: 10px;	
+}	
+	#imageLogo{
+		width: 100%;						
+	}
+	#titleAndMenu{
+		width:100%;	
+	}
+	#headingTitle{
+		font-size: 20px;
+	}
+	#menu{	
+		margin: 0.1% 0.1%;						
+	}
+	.liMainMenu{		
+		width:99%;		
+		min-height:30px;
+		margin:0% 0.1%;			 
+	}	
+		
 }

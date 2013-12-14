@@ -20,6 +20,7 @@
 				<div id="title">
 					<h2 id="headingTitle">Hotell Dream II</h2>	
 				</div>					
+				<div>				
 				<nav id="menu">
 					<ul id="mainNav">
 						<li class="liMainMenu"><a href="<?php echo base_url()?>main" >Home</a></li>
@@ -43,7 +44,8 @@
 						?>								
 					</ul>										
 					<span id="spanMenuMarked" data-menuClicked="<?php echo $navMenuClicked ?>"></span>						
-				</nav>					
+				</nav>
+				</div>					
 			</div>						
 		</header>		
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/jQuery.js"></script>
