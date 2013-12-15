@@ -53,13 +53,8 @@
 	/*border: 1px solid #FFFF66;*/
 	text-align: center;
 }
-/*
-.next, .prev{		
-	padding: 0 5px;	
-}
-*/
 /*Adjustments mainly for mobile phones*/
-@media only screen and (max-width:900px) and (min-width:150px){
+@media only screen and (max-width:700px) and (min-width:150px){
 	#article_content1{	
 		width: 100%;
 		padding-left: 10px;
@@ -84,10 +79,5 @@
 	.hotelPictures{		
 		width: 100%;
 	}	
-	/*	
-	.next, .prev{		
-		padding: 0 1px;	
-	}
-	*/
 }
 

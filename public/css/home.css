@@ -54,7 +54,7 @@
 	text-align: center;
 }
 /*Adjustments mainly for mobile phones*/
-@media only screen and (max-width:900px) and (min-width:150px){
+@media only screen and (max-width:600px) and (min-width:150px){
 	#article_content1{	
 		width: 100%;
 		padding-left: 10px;

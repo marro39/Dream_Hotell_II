@@ -4,13 +4,15 @@
 			<header>
 				<h2>Welcome to the booking section</h2>
 			</header>
-			<p>
-				At hotel Dream we have many different rooms at disposal.<br>
-				Our goal is to have rooms that suits every customers.<br>
-				The rooms differs from one to several rooms,<br>
-				one to several bathrooms, with or without balcony,<br>
-				from one to several beds etc...		
-			</p>
+			<content>			
+				<p>
+					At hotel Dream we have many different rooms at disposal.<br>
+					Our goal is to have rooms that suits every customers.<br>
+					The rooms differs from one to several rooms,<br>
+					one to several bathrooms, with or without balcony,<br>
+					from one to several beds etc...		
+				</p>
+			</content>
 			<p>Click <a id="makeBooking" href="#">here</a> to book a room</p>			
 		</div>
 		<div id="bookingPictures">

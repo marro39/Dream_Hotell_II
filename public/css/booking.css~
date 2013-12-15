@@ -155,10 +155,7 @@ h2{
 		margin:1% 1%;		
 	}
 	#bookingText header h2{
-		font-size: 110%;	
-	}
-	#bookingText content p{
-		font-size: 80%	
+		font-size: 120%;	
 	}
 	#bookingPictures{
 		width: 98%;

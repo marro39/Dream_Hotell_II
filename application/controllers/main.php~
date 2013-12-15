@@ -5,7 +5,7 @@ class Main extends CI_Controller {
 	private $fromDate, $toDate;
 	public function index(){		
 		$this->data['title'] = 'Hotel Dream II - Home';
-		$this->data['navMenuClicked'] ='main';				
+		$this->data['navMenuClicked'] ='main/main';				
 		//Get all room picture names from database!
 		$this->load->model('model_room');
 		$roomPics['rooms']=$this->model_room->getRooms();
