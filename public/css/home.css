@@ -32,27 +32,26 @@
 }
 #contPicRoom, #contPicInt, #contPicExt{
 	float:left;
-	height:auto;
+	/*height:30%;*/
 	width: 30%;
 	margin: 1% 0% 0% 3%;
 	/*border:1px solid green;*/		
 }
 .hotelPictures{
-	height: auto;
-	width: 90%;
+	height: 85%;	
+	width: 100%;	
+	display:block;
+	/*border:1px solid green;*/
+	clear: both:
 }
 .prevNextPic{
 	clear:both;	
 	display:block;
-	margin: 1% auto;	
-	width: 40%;
-	height:auto;
+	margin: 0% auto;	
+	width: 100%;
+	height:15%;
 	/*border: 1px solid #FFFF66;*/
-}
-.next, .prev{	
-	display:inline;	
-	padding: 0 5px;
-	
+	text-align: center;
 }
 /*Adjustments mainly for mobile phones*/
 @media only screen and (max-width:900px) and (min-width:150px){
@@ -71,23 +70,14 @@
 	}
 	#contPictures{			
 		width: 100%;
-		min-height: 100px;		
+		/*min-height: 100px;*/		
 	}
 	#contPicRoom, #contPicInt, #contPicExt{	
 		width: 100%;
 		margin:0%;			
 	}
 	.hotelPictures{		
-		width: 95%;
-	}
-	.prevNextPic{	
-		margin: 1px auto;	
-		width: 40%;	
-		/*border:1px solid red;*/	
-	}
-	.next, .prev{		
-		padding: 0 1px;	
-	}
-	
+		width: 100%;
+	}	
 }
 

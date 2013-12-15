@@ -84,7 +84,7 @@
 					>
 						<div class="prevNextPic">
 							<span id="prev2" class="prev">&lt;&lt;Prev </span>
-	        				<span id="next0" class="next"> Next&gt;&gt;</span>
+	        				<span id="next2" class="next"> Next&gt;&gt;</span>
 	        			</div>
 						<?php						
 							for ($i=0; $i < count($roomHotell); $i++) { 
