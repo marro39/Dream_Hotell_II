@@ -10,7 +10,7 @@
 #articleBooking1{
 	display: block;
 	width: 100%;
-	min-height: 500px;
+	height: 500px;
 	/*border: 2px dashed red;*/
 	margin: 0.5% auto;
 }
@@ -47,43 +47,53 @@
 /* ------------------------------------------------------Second part----------------------------------------------------------------------*/
 #articleBooking2{
 	display: none;
-	width: 900px;
+	width: 100%;
 	height: 500px;	
-	margin: 4px auto;
+	margin: 0.5% auto;
 }
 #bookingContinfo{
-	padding-top:10px;
+	width:100%; 	
+	display:block;	
+	padding-top:1%;
 	text-align: center;
-	margin:auto;
+	margin: 0% auto;
 }
 #bookingFromToCont{	
-	width: 510px;
-	height:280px;
-	margin: 5px auto;
-	padding: 0px 5px;
+	width:60%;
+	min-height:22%;	
+	border:1px solid green;
+	display: block;
+	margin: 0% auto;	
 }
 #bookingFromCont{
 	float:left;
-	width:250px;
-	min-height:280px;			
+	width:49%;
+	height:45%;
+	border:1px solid red;
+	text-align: center;		
 }
 #bookingToCont{
 	float:left;
-	width:250px;
-	min-height:280px;			
+	width:49%;
+	height:45%;
+	border:1px solid red;
+	text-align: center;
 }
 #bookingFromCont h3, #bookingToCont h3{
 	text-align: center;
 }
-.bookingCal div{	
-	font-size: 14px;	
+#tfFromDate, #tfToDate{
+	text-align: center;
+	width: 75%;
+	font-size: 87%;				
 }
-.bookingCal h3{
-	font-size: 20px;
+/*
+#tfToDate{
+	text-align: center;
+	width: 20%;
+	margin:0px auto;	
 }
-.bookingCal{
-	margin: 0px auto;
-}
+*/
 #buttonSearchRoom{	
 	font-size: 20px;	
 }
@@ -91,15 +101,17 @@
 	border-radius:4px;
 }
 #bookingDivButton{
-	width: 150px;
+	clear: both;	
+	width: auto;
 	height: 30px;
-	margin:auto;	
+	margin:0.5% auto;
+	border:1px solid yellow;
+	text-align: center;	
 }
 /*----------------------------------------------------Results section of booking-----------------------------------------*/
 #result_booking{
 	width: 900px;
-	height: 600px;
-	overflow:auto;	
+	height: 600px;	
 	display: none;
 	margin: 0px auto;
 }
@@ -142,11 +154,12 @@ h2{
 	margin: 10px auto;	
 }
 /*Adjustments mainly for mobile phones*/
-@media only screen and (max-width:600px) and (min-width:150px){
+@media only screen and (max-width:600px){
 	#section_content_booking1{
 		width:100%;
 		min-height:300px;
-	}	
+	}
+	/* --------First part of page-----------------------------------------*/	
 	#articleBooking1{	
 		min-height: 680px;	
 	}	
@@ -164,6 +177,72 @@ h2{
 		width: 98%;
 		margin:1% 1%;		
 	}
-	
+	/* --------Second part of page-----------------------------------------*/
+	#articleBooking2{
+		height: 850px;		
+	}	
+	#bookingFromToCont{	
+		width:96%;				
+	}
+	#bookingFromCont{		
+		width:100%;				
+	}
+	/*	
+	#bookingFromCal{
+		height:71%;
+		width:47%;
+		border:1px solid green;
+		margin:0% auto;				
+	}
+	*/
+	#bookingToCont{
+		width:100%;
+	}
+	/*	
+	#bookingToCal{
+		margin:0% auto;
+		height:71%;
+		width:47%;
+		border:1px solid green;
+	}
+	*/
+	/*	
+	.bookingCal{	
+		font-size: 150%;	
+	}
+	*/
+	#bookingDivButton{
+		margin:0% auto;		
+	}
 }
-	
+
+/*
+//Only for rezising the calendars-------------------------------------------------------
+@media only screen and (max-width:2000px){
+	.bookingCal div{	
+		font-size: 300%;	
+	}
+}
+@media only screen and (max-width:1850px){
+	.bookingCal div{	
+		font-size: 90%;	
+	}
+}
+@media only screen and (max-width:1500px){
+	.bookingCal div{	
+		font-size: 80%;	
+	}
+}
+@media only screen and (max-width:1350px){
+	.bookingCal div{	
+		font-size: 70%;	
+	}
+}
+@media only screen and (max-width:1200px){
+	.bookingCal div{	
+		font-size: 60%;	
+	}
+}
+*/
+
+

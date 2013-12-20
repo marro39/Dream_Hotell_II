@@ -37,16 +37,30 @@ $(document).ready(function(){
 	$('#makeBooking').on('click', function(){		
 		$('#articleBooking1').slideUp(1000,function(){
 			$('#articleBooking2').slideDown(1000,function(){
+				
+				$('#tfFromDate').pickadate({
+					format:'yy-mm-dd',
+					min:1,
+					max:365	
+				});	
+				$('#tfToDate').pickadate({
+					format:'yy-mm-dd',
+					min: 2,
+					max: 366	
+				});				
+								
+				/*				
 				$('#bookingFromCal').datepicker({
 					dateFormat:'yy-mm-dd',
 					maxDate:'+1y',
-					minDate:1										
+					minDate:1															
 				});
 				$('#bookingToCal').datepicker({
 					dateFormat:'yy-mm-dd',
 					maxDate:'+1y',
 					minDate:2					
 				});
+				*/
 			});
 		});
 		$('#buttonSearchRoom').click(function(){			
@@ -86,7 +100,7 @@ $(document).ready(function(){
 						}
 					}							
 				}).error(function(){					
-					$('#bookingMessage').text('Something went wrong, please try again');											
+					$('#bookingMessage').text('Something went wrong! Please try again! ');											
 				});				
 				$('#newSearchBooking').click(function(){
 					$('#result_booking').slideUp();
@@ -111,7 +125,7 @@ $(document).ready(function(){
 					$('#bookingMessage').text('Your order is set! Thanks for choosing Dream Hotel II').css('color','green');
 				}
 			}).error(function(){					
-				$('#bookingMessage').text('Something went wrong booking wished roome, please try again');				
+				$('#bookingMessage').text('Something went wrong booking wished room! Are you logged in? Please try again');				
 			});
 		});
 	});

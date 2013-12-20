@@ -32,18 +32,20 @@
 		<div id="bookingContinfo">
 			<h2 id="bookRoomTitle">Book room</h2>
 			<p id="bookRoomDescInfo">
-				Please click your wished date to see if we have
-				a room that will suit your needs!						
+				To search for available rooms, first click on "arrival" and "departure" button to set your wished dates.<br>
+				Finally just click the "search room" button to get search results.						
 			</p>					
 		</div>
-		<div id="bookingFromToCont" class="bookingCal">
+		<div id="bookingFromToCont">
 			<div id="bookingFromCont">
-				<h3>From</h3>
-				<div id="bookingFromCal" class="bookingCal"></div>
+				<h3>From</h3>								
+				<input type="button" id="tfFromDate" value="* Set arrival date *" class="button"/>				
+				<!--<div id="bookingFromCal" class="bookingCal"></div>-->
 			</div>
-			<div id="bookingToCont" class="bookingCal">
-				<h3>To</h3>
-				<div id="bookingToCal" class="bookingCal"></div>
+			<div id="bookingToCont">
+				<h3>To</h3>								
+				<input type="button" id="tfToDate" value="* Set departure date *" class="button"/>				
+				<!--<div id="bookingToCal" class="bookingCal"></div>-->
 			</div>
 		</div>						
 		<div id="bookingDivButton">

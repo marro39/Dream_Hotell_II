@@ -300,7 +300,7 @@ button.ui-button::-moz-focus-inner {
 .ui-datepicker {
 	width: 17em;
 	padding: .2em .2em 0;
-	display: none;
+	display: none;	
 }
 .ui-datepicker .ui-datepicker-header {
 	position: relative;
@@ -787,7 +787,7 @@ body .ui-tooltip {
 ----------------------------------*/
 .ui-widget {
 	font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
-	font-size: 1.1em;
+	font-size: 1.1em;	
 }
 .ui-widget .ui-widget {
 	font-size: 1em;

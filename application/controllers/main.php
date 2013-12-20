@@ -139,13 +139,6 @@ class Main extends CI_Controller {
 		}
 		else{
 			
-		}
-		
-				
-	}
-	
-		
-		
-	
+		}				
+	}	
 }
-

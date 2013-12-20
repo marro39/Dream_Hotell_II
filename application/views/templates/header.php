@@ -13,7 +13,9 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/booking.css" />	
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/colorbox/colorbox.css" />
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/ui-lightness/uiCustom.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/administrate.css" />		
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/css/administrate.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/js/pickadate/lib/themes/default.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>public/js/pickadate/lib/themes/classic.date.css" />						
 	</head>
 	<body>
 		<header id="heading_section">								
@@ -55,6 +57,9 @@
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/cycle2.js"></script>
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/jquery.cycle2.tile.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/colorbox/colorbox.js"></script>
-		<script type="text/javascript" src="<?php echo base_url()?>public/js/ui/uiCustom.js"></script>
+		<script type="text/javascript" src="<?php echo base_url()?>public/js/ui/uiCustom.js"></script>		
+		<script type="text/javascript" src="<?php echo base_url()?>public/js/pickadate/lib/picker.js"></script>
+		<script type="text/javascript" src="<?php echo base_url()?>public/js/pickadate/lib/picker.date.js"></script>
+		
 	
 	
