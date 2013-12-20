@@ -39,12 +39,12 @@
 		<div id="bookingFromToCont">
 			<div id="bookingFromCont">
 				<h3>From</h3>								
-				<input type="button" id="tfFromDate" value="* Set arrival date *" class="button"/>				
+				<input type="button" id="bFromDate" value="* Arrival *" class="button"/>				
 				<!--<div id="bookingFromCal" class="bookingCal"></div>-->
 			</div>
 			<div id="bookingToCont">
 				<h3>To</h3>								
-				<input type="button" id="tfToDate" value="* Set departure date *" class="button"/>				
+				<input type="button" id="bToDate" value="* Departure *" class="button"/>				
 				<!--<div id="bookingToCal" class="bookingCal"></div>-->
 			</div>
 		</div>						

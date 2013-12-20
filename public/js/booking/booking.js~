@@ -38,12 +38,12 @@ $(document).ready(function(){
 		$('#articleBooking1').slideUp(1000,function(){
 			$('#articleBooking2').slideDown(1000,function(){
 				
-				$('#tfFromDate').pickadate({
+				$('#bFromDate').pickadate({
 					format:'yy-mm-dd',
 					min:1,
 					max:365	
 				});	
-				$('#tfToDate').pickadate({
+				$('#bToDate').pickadate({
 					format:'yy-mm-dd',
 					min: 2,
 					max: 366	
@@ -66,8 +66,10 @@ $(document).ready(function(){
 		$('#buttonSearchRoom').click(function(){			
 			$('#result_booking').slideDown(function(){
 				$('#articleBooking2').slideUp();				
-				fromDate=$.trim($('#bookingFromCal').val() + " 00:00:00");
-				toDate=$.trim($('#bookingToCal').val() + " 00:00:00");
+				//fromDate=$.trim($('#bookingFromCal').val() + " 00:00:00");
+				//toDate=$.trim($('#bookingToCal').val() + " 00:00:00");
+				fromDate=$.trim($('#bFromDate').val() + " 00:00:00");
+				toDate=$.trim($('#bToDate').val() + " 00:00:00");
 				//alert(fromDate);
 				//alert(toDate);
 				$('#tableRooms tbody').empty();
