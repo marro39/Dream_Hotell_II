@@ -3,16 +3,14 @@
 		<div id="bookingText">							
 			<header>
 				<h2>Welcome to the booking section</h2>
-			</header>
-			<content>			
+			</header>						
 				<p>
 					At hotel Dream we have many different rooms at disposal.<br>
 					Our goal is to have rooms that suits every customers.<br>
 					The rooms differs from one to several rooms,<br>
 					one to several bathrooms, with or without balcony,<br>
 					from one to several beds etc...		
-				</p>
-			</content>
+				</p>			
 			<p>Click <a id="makeBooking" href="#">here</a> to book a room</p>			
 		</div>
 		<div id="bookingPictures">
@@ -53,27 +51,25 @@
 		</div>				
 	</article>	
 	<article id="result_booking">
-		<p id="bookingMessage"></p>
-		<h2>Aviliable rooms for your search</h2>		
+		<div id="booking_message_cont">
+			<p id="bookingMessage"></p>
+			<h2>Available rooms for your search</h2>
+		</div>				
 		<div id="roomBookingCont">
-			<article>
-				<table id="tableRooms">
-					<thead>
-						<tr>
-							<td>Room Id</td><td>Room number</td><td>Balcony</td><td>Suite</td><td>Beds</td><td>Bathrooms</td><td>Floor</td><td>Select room</td>
-						</tr>
-					</thead>
-					<tbody>
+			<table id="tableRooms">
+				<thead>
+					<tr>
+						<td>Room Id</td><td>Room number</td><td>Balcony</td><td>Suite</td><td>Beds</td><td>Bath rooms</td><td>Floor</td><td>Select room</td>
+					</tr>
+				</thead>
+				<tbody>
 					
-					</tbody>
-				</table>
-				<div id="buttonBookRoomCont">
-					<input type="button" id="bookRoom" value="Book room" class="button" />					
-				</div>
-				<div id="linkBookRoomCont">
-					<p>Click <a href="#" id="newSearchBooking">here</a> if you want to search again!</p>
-				</div>
-			</article>
+				</tbody>
+			</table>
+			<div id="buttonBookAndLink">
+				<input type="button" id="bookRoom" value="Book room" class="button" />
+				<p>Click <a href="#" id="newSearchBooking">here</a> if you want to search again!</p>					
+			</div>						
 		</div>
 	</article>
 </section>
