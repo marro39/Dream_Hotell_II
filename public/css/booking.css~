@@ -110,16 +110,31 @@
 /*----------------------------------------------------Results section of booking-----------------------------------------*/
 #result_booking{
 	width: 100%;
-	height: 500px;	
+	height: 550px;	
 	display: none;
 	margin: 0% auto;
-	/*border:1px solid green;*/
-	-webkit-box-orient: vertical;
-	/*-webkit-box-pack: center;*/	
+	/*border:1px solid green;*/		
+	/*I HAVE SET DISPLAY TO BOX IN JS FILE!*/
+		
+	
+	/*---------------------Safari, Opera and Crome-------------------------------------*/	
+	-webkit-box-orient: vertical;	
+	/*-webkit-box-pack: center;*/
+	
+	/*---------------------Firefox-----------------------------------------------------*/
+	/*-moz-box-orient:vertical;*/
+	flex-direction:column;
+	
+	/*---------------------EXPLORER 10--------------------------------------------------*/	
+	-ms-flex-direction:column;	
+	
+	/*---------------------W3C---------------------------------------------------------*/
+	box-orient:vertical;		
+	
 }
 #booking_message_cont{
 	/*width:100%;*/
-	border:1px solid green;
+	/*border:1px solid green;*/
 	min-height:20px;
 	margin:0%;
 	padding:0%;	
@@ -130,47 +145,207 @@
 }
 #roomBookingCont{
 	height: 500px;
+	/*---------------------Safari, Opera and Crome-------------------------------------*/	
 	display: -webkit-box;
 	-webkit-box-orient:vertical;
 	-webkit-box-pack: center;	
+	
+	/*---------------------Firefox-----------------------------------------------------*/
+	display: flex;	
+	/*-moz-box-orient:vertical;*/
+	flex-direction:column;
+	/*-moz-box-pack:center;*/
+	justify-content:center;
+	/*align-items:center;*/
+	
+	/*---------------------W3C---------------------------------------------------------*/
+	display: box;	
+	box-orient: vertical;	
+	box-pack:box;
+	/*---------------------EXPLORER 10--------------------------------------------------*/	
+	display: -ms-flexbox;
+	-ms-flex-pack:center;	
+	-ms-flex-direction:column;	
+	
+	/*border:1px solid red;*/
+		
 }
 #tableRooms{
+	/*---------------------Safari, Opera and Crome-------------------------------------*/		
 	display: -webkit-box;
 	-webkit-box-orient:vertical;
 	-webkit-box-pack:center;	
-	border:1px solid white;	
+
+	/*---------------------Firefox-----------------------------------------------------*/
+	/*
+		display: -moz-box;	
+		-moz-box-orient:vertical;
+		-moz-box-pack:center;
+	*/
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		/*align-items:center;*/
+	/*---------------------W3C---------------------------------------------------------*/
+	display: box;	
+	box-orient:vertical;
+	box-pack: center;
+	
+	/*---------------------EXPLORER 10--------------------------------------------------*/
+	display: -ms-flexbox
+	-ms-flex-pack:center;
+	-ms-flex-direction:column;		
+		
+	/*border:1px solid white;*/	
+	width: 100%;
+	/*table-layout: fixed;*/
 }
 #tableRooms thead, #tableRooms tbody{
+	/*---------------------Safari, Opera and Crome-------------------------------------*/	
 	display:-webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-box-pack:center;
+	
+	/*---------------------Firefox-----------------------------------------------------*/
+/*	
+	display: -moz-box;
+	-moz-box-orient:vertical;
+	-moz-box-pack:center;
+*/
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	/*align-items:center;*/
+	
+	/*---------------------EXPLORER 10--------------------------------------------------*/
+	display: -ms-flexbox;
+	-ms-flex-direction:column;
+	-ms-flex-pack:center;	
+	
+	/*---------------------W3C---------------------------------------------------------*/
+	display:box;
+	box-orient:vertical;
+	box-pack:center;
+	
+	/*border:1px solid yellow;*/
 }
 #tableRooms tr{
+	/*---------------------Safari, Opera and Crome-------------------------------------*/	
 	display:-webkit-box;
 	-webkit-box-orient: horizontal;
 	-webkit-box-pack:center;	
-	-webkit-box-align:center;		
+	-webkit-box-align:center;
+	
+	/*---------------------Firefox-----------------------------------------------------*/
+/*	
+	display: -moz-box;
+	-moz-box-orient:horizontal;
+	-moz-box-pack:center;
+	-moz-box-align:center;
+*/
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	/*align-items:center;*/
+	
+	/*---------------------EXPLORER 10--------------------------------------------------*/
+	display: -ms-flexbox;
+	-ms-flex-pack:center;	
+	-ms-flex-direction:row;
+	-ms-flex-align:center;
+	
+	/*---------------------W3C---------------------------------------------------------*/
+	display: box;
+	box-pack:center;
+	box-align:center;
+	box-orient:horizontal;
+			
 }
 #tableRooms td{	
+	/*---------------------Safari, Opera and Crome-------------------------------------*/	
 	display: -webkit-box;
-	-webkit-box-flex:1;	
-	text-align:-webkit-center;
-	border:1px solid white;
+	-webkit-box-flex:1;
+	text-align:-webkit-center;	
+		
+	/*---------------------Firefox-----------------------------------------------------*/
+/*	
+	display: -moz-box;
+	-moz-box-flex:1;
+	justify-content:center;
+*/
+	display:flex;
+	/*justify-content:center;*/
+	flex:auto;
+	justify-content:center;
+	align-items:center;
+	
+	/*---------------------EXPLORER 10--------------------------------------------------*/
+	
+	display: -ms-flexbox;
+	-ms-flex:1;
+	/*CENTER TEXT IN CELLS FOR EXPLORER*/	
+	justify-content:center;
+
+	/*---------------------W3C---------------------------------------------------------*/
+	display: box;
+	box-flex:1;	
+	/*text-align:center;*/
+	
+	
+	/*border:1px solid white;*/
 	/*TO MAKE EQUALLY LARGE TABLE DATA FIELDS JUST SET A WIDTH, WEBKIT WILL FIX THE REST*/	
-	width:2px;
+	width:1%;
+	
 }
+
+#tableRooms tr:nth-child(even){
+	background-color: #0F0F0F;	
+}
+#tableRooms thead tr:first-child{
+	background-color: #0F0F0F;	
+}
+/*
+#tableRooms tr:nth-child(odd){
+	background-color: #1874CD;	
+}
+*/
 #buttonBookAndLink{
 	margin: 10px auto;	
+	
+	/*---------------------Safari, Opera and Crome-------------------------------------*/	
 	display:-webkit-box;
 	-webkit-box-orient:vertical;
 	-webkit-box-pack:center;
+	text-align:-webkit-center;	
+	
+	/*---------------------Firefox-----------------------------------------------------*/
+	display:-moz-box;
+	-moz-box-orient:vertical;
+	-moz-box-pack:center;
+	text-align:-moz-center;
+	
+	/*---------------------EXPLORER 10--------------------------------------------------*/
+	display: -ms-flexbox;
+	-ms-flex-pack:center;
+	/*text-align: -ms-center;*/
+	/*justify-content:center;*/
+	-ms-flex-direction:column;
+	/*SET ITEMS IN CENTER FOR EXPLORER*/	
+	align-items:center;
+	
+	/*---------------------W3C---------------------------------------------------------*/
+	display: box;
+	box-pack:center;
+	box-orient:vertical;
+	text-align: center;
+	
 	height:90px;
 	/*border:1px solid yellow;*/
-	text-align:-webkit-center;	
 }
 #bookRoom{	
 	font-size: 20px;
-	margin: 10px auto;	
+	margin-top: 10px;	
+	/*border:1px solid orange;*/	 
 }
 h2{
 	text-align:center;

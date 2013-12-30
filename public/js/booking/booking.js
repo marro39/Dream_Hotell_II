@@ -66,6 +66,10 @@ $(document).ready(function(){
 		$('#buttonSearchRoom').click(function(){			
 			$('#result_booking').slideDown(function(){
 				$('#result_booking').css('display','-webkit-box');
+				$('#result_booking').css('display','flex');
+				$('#result_booking').css('display','-ms-flexbox');
+				$('#result_booking').css('display','box');
+				
 				$('#articleBooking2').slideUp();				
 				//fromDate=$.trim($('#bookingFromCal').val() + " 00:00:00");
 				//toDate=$.trim($('#bookingToCal').val() + " 00:00:00");
