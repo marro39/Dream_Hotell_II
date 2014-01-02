@@ -50,7 +50,6 @@ $(document).ready(function(){
 					directionsDisplay.setDirections(response);
 				}
 			  });
-			  $('#routeDescription').css('display','-webkit-flex');
-			  $('#routeDescription').css('display','flex');			  
+			  $('#routeDescription').css('display','-webkit-flex');			  
 		}	
 });

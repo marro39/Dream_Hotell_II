@@ -9,7 +9,8 @@
 			find us from where you are located!)
 		</p>
 		<p class="displayCenter">Left click on map to get a way description!</p>
-		<div id="mainMapContainer">			
+		<div id="mainMapContainer">
+			
 			<div id="locateMap"></div>
 			<div id="routeDescription"></div>
 		</div>

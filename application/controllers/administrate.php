@@ -26,6 +26,22 @@ class Administrate extends CI_Controller {
 		}		
 		
 	}
+	public function delete_booking(){
+		if($this->session->userdata('access_level') == 3){
+			//$this->load->model();				
+		}	
+		else {
+			$this->data['title'] = 'Hotel Dream II - Home';
+			$this->data['navMenuClicked'] ='main';				
+			//Get all room picture names from database!
+			$this->load->model('model_Room');
+			$roomPics['rooms']=$this->model_Room->getRooms();
+			//echo count($rooms);		
+			$this->load->view('/templates/header', $this->data);
+			$this->load->view('home', $roomPics);		
+			$this->load->view('/templates/footer');	
+		}
+	}
 	
 }
 

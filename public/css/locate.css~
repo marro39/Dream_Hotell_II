@@ -21,7 +21,7 @@
 	display: -webkit-flex;
 	-webkit-justify-content:center;
 	
-	/*--------------------Firefox, explorer and w3c------------------------------------------------*/
+	/*--------------------Firefox------------------------------------------------*/
 	display:flex;
 	justify-content:center;
 }
@@ -30,7 +30,7 @@
 	display: -webkit-flex;
 	-webkit-justify-content:center;	
 	
-	/*--------------------Firefox, explorer and w3c------------------------------------------------*/
+	/*--------------------Firefox and w3c------------------------------------------------*/
 	display: flex;
 	justify-content:center;
 	
@@ -41,7 +41,7 @@
 	-webkit-flex-direction:row;	
 	-webkit-justify-content:center;	
 	
-	/*--------------------Firefox, explorer and w3c------------------------------------------------*/
+	/*--------------------Firefox and w3c------------------------------------------------*/
 	display: flex;
 	flex-direction:row;
 	justify-content:center;
@@ -55,7 +55,7 @@
 	display: -webkit-flex;	
 	-webkit-flex:1;	
 	
-	/*--------------------Firefox, explorer and w3c------------------------------------------------*/
+	/*--------------------Firefox and w3c------------------------------------------------*/
 	display:flex;
 	flex:1;
 	
@@ -70,7 +70,7 @@
 	display: none;	
 	-webkit-flex:1;
 	
-	/*--------------------Firefox, explorer and w3c------------------------------------------------*/
+	/*--------------------Firefox and w3c------------------------------------------------*/
 	display:none;
 	flex:1;
 		
@@ -90,7 +90,7 @@
 			/*--------------------Crome and Opera----------------------------------------*/	
 			-webkit-flex-direction:column;
 			
-			/*--------------------Firefox, explorer and w3c------------------------------------------------*/			
+			/*--------------------Firefox and w3c------------------------------------------------*/			
 			flex-direction:column;			
 		}			
 		#locateMap{
