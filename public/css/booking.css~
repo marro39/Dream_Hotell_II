@@ -192,10 +192,11 @@
 	box-pack: center;
 	
 	/*---------------------EXPLORER 10--------------------------------------------------*/
+/*	
 	display: -ms-flexbox
 	-ms-flex-pack:center;
 	-ms-flex-direction:column;		
-		
+	*/	
 	/*border:1px solid white;*/	
 	width: 100%;
 	/*table-layout: fixed;*/
@@ -249,11 +250,12 @@
 	/*align-items:center;*/
 	
 	/*---------------------EXPLORER 10--------------------------------------------------*/
+/*	
 	display: -ms-flexbox;
 	-ms-flex-pack:center;	
 	-ms-flex-direction:row;
 	-ms-flex-align:center;
-	
+	*/
 	/*---------------------W3C---------------------------------------------------------*/
 	display: box;
 	box-pack:center;
@@ -280,12 +282,12 @@
 	align-items:center;
 	
 	/*---------------------EXPLORER 10--------------------------------------------------*/
-	
+	/*
 	display: -ms-flexbox;
 	-ms-flex:1;
-	/*CENTER TEXT IN CELLS FOR EXPLORER*/	
+	CENTER TEXT IN CELLS FOR EXPLORER	
 	justify-content:center;
-
+*/
 	/*---------------------W3C---------------------------------------------------------*/
 	display: box;
 	box-flex:1;	

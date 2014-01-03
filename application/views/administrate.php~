@@ -22,7 +22,7 @@
 						<a href="#">Bookings <span class="downArrow">&#9660;</span></a>
 						<ul class="subOne">
 							<li>
-								<a href="#" id="edit_delete_booking">Edit/delete booking</a>
+								<a href="#" id="delete_booking">Delete booking</a>
 							</li>
 							<li>
 								<a href="#">Add booking</a>
@@ -71,8 +71,19 @@
 				</ul>
 			<div class="clear"></div>							
 		</nav>
-		<article id="edit_delete_booking_wrapper">
-			<p>HELLO WORLD</p>
+		<article id="delete_booking_wrapper">
+			<header><h3>Delete booking</h3></header>
+			<div id="deleteRoomCont">								
+				<table id="tAdminDeleteRoom" >
+					<thead>
+						<tr><td>First name</td><td>Last name</td><td>Mail</td><td>Room id</td><td>Book id</td><td>Arrival</td><td>Departure</td><td></td></tr>
+					</thead>
+					<tbody>					
+					</tbody>
+				</table>	
+				<button type="input" id="adminDeleteBooking">Delete booking</button>						
+			</div>
+			
 		<article>		
 </section>
 

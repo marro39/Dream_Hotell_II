@@ -2,6 +2,11 @@
 
 class Model_Room extends CI_Model {
     private $fromDate, $toDate;
+    
+    private $encryptionData=array(
+			'key' => '1234567891234567',
+			'iv' => '1234567891234567'
+	);	
     function __construct()
     {
         // Call the Model constructor
@@ -78,4 +83,45 @@ class Model_Room extends CI_Model {
 			return false;
 		}
 	}
+	public function getAllBookedRooms(){
+		$this->load->library('my_encryption',$this->encryptionData);
+		$this->my_encryption->initializeCipher();			
+		
+		$this->db->select('*');mysql_error();				
+		$this->db->from('tblPerson');mysql_error();				
+		$this->db->join('tblBooking','tblBooking.email = tblPerson.email');mysql_error();				
+		$this->db->join('tblRoom', 'tblRoom.roomId = tblBooking.roomId');mysql_error();
+		$query=$this->db->get();mysql_error();
+		
+		$aBookedRooms=array();
+		
+		if($query->num_rows() > 0 ){						
+			foreach($query->result() as $row){
+								
+				$arrayRow=array(
+					'firstName' => $this->my_encryption->decrypt($row->firstname),
+					'lastName'	=> $this->my_encryption->decrypt($row->lastname),
+					'email' => $this->my_encryption->decrypt($row->email),
+					'roomId' => $row->roomId,
+					'bookId' => $row->bookId,
+					'arrival' => $row->dateArrival,
+					'departure' => $row->dateDeparture
+								
+				);
+				array_push($aBookedRooms,$arrayRow);				
+			}	
+			$this->my_encryption->deInitializeCipher();
+			$this->my_encryption->closeCipher();
+					
+			//Count rows			
+			//return json_encode($query->num_rows());			
+			//Count fields			
+			//return json_encode($query->num_fields());
+
+			return json_encode($aBookedRooms);
+		}
+		else{
+			return json_encode('Failure');	
+		}		
+	} 
 }

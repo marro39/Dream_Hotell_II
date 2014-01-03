@@ -8,10 +8,14 @@
         /*-----------------Google Crome and Opera------------------------*/
         display: -webkit-flex;
         -webkit-flex-direction:column;
+        -webkit-justify-content:center;
+        -webkit-align-items:center;
         
         /*-------------Firefox, explorer and w3c-------------------------*/
         display: flex;
-        flex-direction:column;                        
+        flex-direction:column;         
+        justify-content:center; 
+        align-items:center;              
 }
 #sectionAdministrate1 header{
 		/*-----------------Google Crome and Opera------------------------*/        
@@ -25,7 +29,7 @@
 			align-items:center;
 }
 #navContAdministrate{			        
-        width:90%;        
+        width:99%;        
         margin: 1% auto;
         min-height:50px;
         display:-webkit-flex;
@@ -152,20 +156,119 @@ ul#menulistAdmin li:hover a:hover{
         font-size: 14px;
         position:relative;
 }
-/*--------------------------------------------------Second part of page------------------------------------------------------*/
-#edit_delete_booking_wrapper{                
-        width:1000px;
-        height:400px;        
-        border:1px solid #008000;
-        display:none;
-        margin:4px auto;
-        background-color:#000000;                                
-}
 .clear{
         clear:both;
         margin:0px;
         padding:0px;
 }
+/*--------------------------------------------------Second part of page------------------------------------------------------*/
+
+/*-----------------------------------------------------Delete booking---------------------*/
+#delete_booking_wrapper{                
+        width:99%;
+        height:500px;        
+        /*border:1px solid #008000;*/
+        display:none;        
+        background-color:#000000; 
+        padding:0%;
+        margin:0%;
+        
+        /*-------------Google crome and Opera---------*/
+        	-webkit-flex-direction:column;
+        	-webkit-justify-content:flex-start;        	
+        /*-------------Explorer, Firefox and W3C------*/
+        	flex-direction:column;        
+        	justify-content:flex-start;        	             
+}
+#delete_booking_wrapper header{
+	/*-------------Google crome and Opera---------*/
+	display: -webkit-flex;	
+	-webkit-flex-direction:column;
+   -webkit-justify-content:flex-start;
+      
+   /*-------------Explorer, Firefox and W3C------*/
+	 display: flex;   
+    flex-direction:column;
+    justify-content:flex-start;     
+}
+#deleteRoomCont{
+	width:100%;	
+	/*-------------Google crome and Opera---------*/
+		display: -webkit-flex;
+		-webkit-flex-direction:column;
+		-webkit-align-items:center;
+	 /*-------------Explorer, Firefox and W3C------*/
+	 	display:flex;
+	 	flex-direction:column;	
+	 	align-items:center; 	
+}
+#tAdminDeleteRoom{
+	width: 100%;
+	/*-------------Google crome and Opera---------*/
+		display: -webkit-flex;
+		-webkit-flex-direction:column;		
+	 /*-------------Explorer, Firefox and W3C------*/
+	 	display:flex;
+	 	flex-direction:column;		 		
+}
+#tAdminDeleteRoom thead, #tAdminDeleteRoom tbody{
+	/*-------------Google crome and Opera---------*/
+	display: -webkit-flex;
+	-webkit-flex-direction:column;
+
+	/*-------------Explorer, Firefox and W3C------*/
+	display: flex;
+	flex-direction:column;	
+} 
+#tAdminDeleteRoom tr{
+	/*-------------Google crome and Opera---------*/	
+	display: -webkit-flex;
+	-webkit-flex-direction:row;
+	
+	/*-------------Explorer, Firefox and W3C------*/
+	display: flex;
+	flex-direction:row;			
+	
+}
+#tAdminDeleteRoom td{
+	/*-------------Google crome and Opera---------*/		
+	-webkit-flex:1;
+	display: -webkit-flex;
+	-webkit-justify-content:center;
+	-webkit-align-items:center;
+	
+		
+	/*-------------Explorer, Firefox and W3C------*/	
+	display: flex;
+	flex:auto;	
+	justify-content:center;
+	align-items:center;	
+/*************SET WIDTH TO 1% IS VERY IMPORTANT*************************************/
+	width: 1%;
+	font-size: 90%;
+	
+}
+#tAdminDeleteRoom, #tAdminDeleteRoom td{
+	/*border:1px solid green;*/	
+} 
+#tAdminDeleteRoom tr:nth-child(even){
+	background-color: #0F0F0F;	
+}
+#tAdminDeleteRoom thead tr:first-child{
+	background-color: #0F0F0F;	
+}
+#adminDeleteBooking{
+	width: 20%;
+	margin-top: 2%;
+	border-radius:10px;	
+}
+
+
+
+
+ 
+
+
 @media only screen and (min-width:1px) and (max-width:600px){
 		#sectionAdministrate1{
 			width: 100%;	
@@ -177,5 +280,6 @@ ul#menulistAdmin li:hover a:hover{
       	width:100%;        
 		}		
 }
+
 
 
