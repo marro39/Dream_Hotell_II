@@ -25,7 +25,7 @@ class Administrate extends CI_Controller {
 			$this->load->view('/templates/footer');		
 		}		
 		
-	}
+	}	
 	public function delete_booking(){
 		if($this->session->userdata('access_level') == 3){
 			//echo json_encode('Success');
@@ -45,6 +45,9 @@ class Administrate extends CI_Controller {
 			$this->load->view('home', $roomPics);		
 			$this->load->view('/templates/footer');	
 		}
+	}
+	public function uploadPicture(){
+		
 	}
 	
 }

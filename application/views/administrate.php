@@ -66,11 +66,16 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#">Economy</a>
+						<a href="#">Upload</a>
+						<ul class="subOne">
+							<li><a href="#" id="uploadPictureAdmin">Upload pic</a></li>						
+						</ul>
 					</li>				
 				</ul>
 			<div class="clear"></div>							
 		</nav>
+<!--*******************************************Pages********************************************** -->		
+		<!--******Delete booking***************************** -->		
 		<article id="delete_booking_wrapper">
 			<header><h3>Delete booking</h3></header>
 			<div id="deleteRoomCont">								
@@ -84,7 +89,32 @@
 				<button type="input" id="adminDeleteBooking">Delete booking</button>						
 			</div>
 			
-		<article>		
+		</article>	
+		<!--******Upload picture***************************** -->
+		<article id="upload_pic_wrapper">						
+			<header><h3>Upload picture</h3></header>						
+			<?php
+				//echo $error;			
+				echo form_open_multipart('administrate/uploadPicture');
+			?>	
+				<input type="file" name="uploadFile" id="uploadFile"/>
+				<select id="roomTypeAdmin">
+					<option value="ext">External pic</option>
+					<option value="int">Internal pic</option>
+					<option value="room">Room example</option>
+					<option value="ext">Booking rooms</option>		
+				</select>				
+			<?php
+				$roomSubmitInfo=array(
+					'id' => 'uploadSubmitAdmin',
+					'name' => 'uploadSubmitAdmin',
+					'value' => 'Login',
+					'class' => ''
+				);				
+				echo form_submit($roomSubmitInfo);				
+				echo form_close();			
+			?>			
+		</article>		
 </section>
 
 <script type="text/javascript" src="<?php echo base_url()?>public/js/administrate.js"></script>		

@@ -1,4 +1,5 @@
 $(document).ready(function(){		
+/***********************************DELETE BOOKING***********************************************/	
 	$('#delete_booking').click(function(){				
 		$('#delete_booking_wrapper').slideDown(function(){							
 			//Google crome and Opera 			
@@ -33,6 +34,17 @@ $(document).ready(function(){
 				alert('error1');
 			});				
 		});		
+	});
+/**************************UPLOAD PICTURE****************************************************/
+	$('#uploadPictureAdmin').click(function(){		
+		$('#upload_pic_wrapper').slideDown(function(){						
+			/*----------------Crome and Opera-------------------------------------*/		
+			$('#upload_pic_wrapper').css('display','-webkit-flex');
+			/*------------------Explorer, firefox W3C*/
+			$('#upload_pic_wrapper').css('display','-flex');	
+			/*alert('picture');*/	
+		});		
+		
 	});	
 });
 
