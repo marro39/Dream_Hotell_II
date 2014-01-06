@@ -263,6 +263,26 @@ ul#menulistAdmin li:hover a:hover{
 	margin-top: 2%;
 	border-radius:10px;	
 }
+/*The dialog container*/
+#confDelBooking{
+	display: none	
+}
+.ui-dialog{
+	background: #181818;
+		
+}
+.ui-dialog-titlebar{	
+	background: #000000;
+	color: #FFFFFF;	
+}
+.ui-dialog-title{	
+	text-align: center;	
+}
+.ui-dialog-content{
+	background: #606060;
+	color: #FFFFFF;
+	text-align: center;	
+}
 /**********************UPLOAD PICTURE************************************************************/
 #upload_pic_wrapper{                
         width:99%;
@@ -292,6 +312,18 @@ ul#menulistAdmin li:hover a:hover{
         	flex-direction:column;        
         	justify-content:start;
         	align-items:center; 	
+}
+#upload_pic_wrapper form{
+		/*-------------Google crome and Opera---------*/
+			display:-webkit-flex;        	
+        	-webkit-flex-direction:column;
+       	-webkit-justify-content:flex-start;
+       	/*-webkit-align-items: center; */       	
+        /*-------------Explorer, Firefox and W3C------*/
+			display: flex;        	
+        	flex-direction:column;        
+        	justify-content:start;
+        	/*align-items:center;*/ 
 }
 
  

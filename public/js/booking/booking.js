@@ -129,10 +129,22 @@ $(document).ready(function(){
 					'toDate' : toDate
 				},
 				success:function(data){					
-					$('#bookingMessage').text('Your order is set! Thanks for choosing Dream Hotel II').css('color','green');
+					$('#bookingMessage').text('Your order is set! Thanks for choosing Dream Hotel II').css('color','green');					
+					var tempInterval=setInterval(function(){
+						$('#bookingMessage').text('');														
+						clearInterval(tempInterval);							
+						//window.location('cd../administrate/');
+						location.reload();	
+					},3000);
 				}
 			}).error(function(){					
-				$('#bookingMessage').text('Something went wrong booking wished room! Are you logged in? Please try again');				
+				$('#bookingMessage').text('Something went wrong booking wished room! Are you logged in? Please try again');
+				var tempInterval=setInterval(function(){
+					$('#bookingMessage').text('');														
+					clearInterval(tempInterval);							
+					//window.location('cd../administrate/');
+					location.reload();	
+				},3000);				
 			});
 		});
 	});

@@ -176,10 +176,12 @@ ul#menulistAdmin li:hover a:hover{
         
         /*-------------Google crome and Opera---------*/
         	-webkit-flex-direction:column;
-        	-webkit-justify-content:flex-start;        	
+        	-webkit-justify-content:flex-start; 
+        	-webkit-align-items:center;       	
         /*-------------Explorer, Firefox and W3C------*/
         	flex-direction:column;        
-        	justify-content:flex-start;        	             
+        	justify-content:flex-start;  
+        	align-items:center;      	             
 }
 #delete_booking_wrapper header{
 	/*-------------Google crome and Opera---------*/
@@ -262,6 +264,26 @@ ul#menulistAdmin li:hover a:hover{
 	width: 20%;
 	margin-top: 2%;
 	border-radius:10px;	
+}
+/*The dialog container*/
+#confDelBooking{
+	display: none	
+}
+.ui-dialog{
+	background: #181818;
+		
+}
+.ui-dialog-titlebar{	
+	background: #000000;
+	color: #FFFFFF;	
+}
+.ui-dialog-title{	
+	text-align: center;	
+}
+.ui-dialog-content{
+	background: #606060;
+	color: #FFFFFF;
+	text-align: center;	
 }
 /**********************UPLOAD PICTURE************************************************************/
 #upload_pic_wrapper{                

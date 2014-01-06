@@ -78,6 +78,7 @@
 		<!--******Delete booking***************************** -->		
 		<article id="delete_booking_wrapper">
 			<header><h3>Delete booking</h3></header>
+			<p id="delRoomDisplayAdmin"></p>			
 			<div id="deleteRoomCont">								
 				<table id="tAdminDeleteRoom" >
 					<thead>
@@ -87,6 +88,9 @@
 					</tbody>
 				</table>	
 				<button type="input" id="adminDeleteBooking">Delete booking</button>						
+			</div>
+			<div id="confDelBooking" title="Delete booking">
+				<p>Are you sure you want to delete selected booking?</p>			
 			</div>
 			
 		</article>	

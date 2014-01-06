@@ -83,6 +83,20 @@ class Model_Room extends CI_Model {
 			return false;
 		}
 	}
+	public function delSelBooking($bookId){
+		if($this->session->userdata('access_level') >= 3){
+			$this->db->where('bookId',$bookId);			
+			if($this->db->delete('tblBooking')){
+				return true;	
+			}
+			else{
+				return false;	
+			}			
+		}
+		else{
+			return false;			
+		}	
+	}
 	public function getAllBookedRooms(){
 		$this->load->library('my_encryption',$this->encryptionData);
 		$this->my_encryption->initializeCipher();			

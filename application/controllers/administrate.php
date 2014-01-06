@@ -46,6 +46,18 @@ class Administrate extends CI_Controller {
 			$this->load->view('/templates/footer');	
 		}
 	}
+	public function delete_selected_booking(){
+		if($this->session->userdata('access_level') == 3){					
+			$bookId=$this->input->post('roomId');
+			if(isset($bookId)){						
+				$this->load->model('model_Room');								
+				if($this->model_Room->delSelBooking($bookId)){
+					echo json_encode('Success! Selected booking is deleted!');
+				}					
+			}
+				
+		}			
+	}		
 	public function uploadPicture(){
 		
 	}

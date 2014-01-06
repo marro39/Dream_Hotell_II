@@ -1,4 +1,4 @@
-$(document).ready(function(){		
+$(document).ready(function(){	
 /***********************************DELETE BOOKING***********************************************/	
 	$('#delete_booking').click(function(){				
 		$('#delete_booking_wrapper').slideDown(function(){							
@@ -34,6 +34,58 @@ $(document).ready(function(){
 				alert('error1');
 			});				
 		});		
+	});
+	$('#adminDeleteBooking').click(function(){				
+		$('#confDelBooking').dialog({
+			autoOpen:true,
+			show: {
+				effect:'blind',
+				duration:500	
+			},	
+			hide: {
+				effect:'explode',
+				duration: 1000	
+			},
+			height:220,
+			width:420,
+			modal:true,
+			resizable:false,
+			buttons: {'Yes':function(){
+				var selectedRadio=$("input:radio[name='delBooking']:checked").val();
+				//alert(selectedRadio);
+				$.ajax({
+					type:'POST',
+					url:'../administrate/delete_selected_booking',
+					dataType: 'json',
+					data: {'roomId':selectedRadio},
+					success: function(data){
+						//alert(data);
+						$('#delRoomDisplayAdmin').html(data).css('color', 'green');	
+						var tempInterval=setInterval(function(){
+							$('#delRoomDisplayAdmin').html('');														
+							clearInterval(tempInterval);							
+							//window.location('cd../administrate/');
+							location.reload();	
+						},3000);
+					}						
+				}).error(function(){
+					alert('Something went wrong please try again!');
+					$('#delRoomDisplayAdmin').html('Something went wrong please try again!').css('color','red');
+					var tempInterval=setInterval(function(){
+							$('#delRoomDisplayAdmin').html('');														
+							clearInterval(tempInterval);							
+							//window.location('delete_booking');
+							location.reload();	
+					},3000);
+				});				
+				$(this).dialog('close');
+				
+			},
+			'No':function(){
+				$(this).dialog('close');
+				
+			}}							
+		});			
 	});
 /**************************UPLOAD PICTURE****************************************************/
 	$('#uploadPictureAdmin').click(function(){		

@@ -88,6 +88,9 @@
 				</table>	
 				<button type="input" id="adminDeleteBooking">Delete booking</button>						
 			</div>
+			<div id="confDelBooking" title="Delete booking">
+				<p>Are you sure you want to delete selected booking?</p>			
+			</div>
 			
 		</article>	
 		<!--******Upload picture***************************** -->
@@ -114,7 +117,7 @@
 				echo form_submit($roomSubmitInfo);				
 				echo form_close();			
 			?>			
-		<article>		
+		</article>		
 </section>
 
 <script type="text/javascript" src="<?php echo base_url()?>public/js/administrate.js"></script>		
