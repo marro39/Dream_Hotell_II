@@ -78,7 +78,6 @@
 	align-items:center;	
 	margin-top: 2%;
 }
-/*--------------------------------FIRST PART OF PAGE------------------------------------------*/
 #createAccountContent{
 	width:400px;
 	height:200px;

@@ -22,7 +22,7 @@
 									'name' => 'email',
 									'id' => 'email',
 									'value' => set_value('email'),
-									
+									'size' => 20,
 									'maxlength' => 40
 								);
 							echo form_input($emailData);
@@ -37,7 +37,7 @@
 									'id' => 'password',
 									'class' => 'password',
 									'value' => set_value('password'),
-									
+									'size' => 20,
 									'maxlength' => 40													
 								);
 								echo form_password($passwordData);						
