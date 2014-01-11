@@ -106,7 +106,7 @@
 	width:35%;
 	height:200px;
 	/*margin: 20px auto;*/
-	border:1px solid red;
+	/*border:1px solid red;*/
 	display:none;
 	
 	/*--------------Google Crome and Opera----------------------*/	
@@ -118,7 +118,7 @@
 	align-items:flex-start;		
 }
 #formCreateAccount{
-	border:1px solid red;
+	/*border:1px solid red;*/
 	width: 100%;
 	/*--------------Firefox, explorer, W3C----------------------*/	
 	display:flex;
