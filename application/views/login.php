@@ -21,8 +21,7 @@
 								$emailData=array(
 									'name' => 'email',
 									'id' => 'email',
-									'value' => set_value('email'),
-									
+									'value' => set_value('email'),									
 									'maxlength' => 40
 								);
 							echo form_input($emailData);
@@ -36,9 +35,8 @@
 									'name' => 'password',
 									'id' => 'password',
 									'class' => 'password',
-									'value' => set_value('password'),
-									
-									'maxlength' => 40													
+									'value' => set_value('password'),									
+									'maxlength' => 20													
 								);
 								echo form_password($passwordData);						
 							?>
@@ -65,70 +63,89 @@
 			<div id="createAccountContent">
 				<?php 
 					//echo form_open('login/createAccount');
-					echo form_open('main/createAccount');
+					$formDataCreateAccount=array(
+						'id' => 'formCreateAccount',
+						'name' => 'formCreateAccount'					
+					);					
+					echo form_open('main/createAccount',$formDataCreateAccount);
 					//Validation_errors function is not part of form_validation! It is part of form_helper
 					echo validation_errors('<p class="error" >');
 				?>				
-				<label for="firstName" class="labelInput">Firstname:</label><span class="redColor">&nbsp;&nbsp;&nbsp;</span>
-				<?php					
-					
-					$firstName=array(
-						'id' => 'firstName',
-						'name' => 'firstName',
-						'class'=> '',
-						'value' => set_value('firstName')						
-					);
-					echo form_input($firstName);
-				?>
-				<br /><label for="lastName" class="labelInput">Lastname:</label><span class="redColor">&nbsp;&nbsp;&nbsp;</span>
-				<?php					
-					$lastName=array(
-						'id' => 'lastName',
-						'name' => 'lastName',
-						'class'=> '',
-						'value' => set_value('lastName')						
-					);
-					echo form_input($lastName);
-				?>
-				<br /><label for="email1" class="labelInput">Email:</label><span class="redColor"> *</span>				
+				<div id="fNameContCreateAcc">				
+					<label for="firstName" class="labelInput">Firstname:</label><span class="redColor">&nbsp;&nbsp;</span>
+					<?php					
+						$firstName=array(
+							'id' => 'firstName',
+							'name' => 'firstName',
+							'class'=> '',
+							'value' => set_value('firstName'),
+							'maxLength' => 20						
+						);
+						echo form_input($firstName);
+					?>
+				</div>
+				<div id="lNameContCreateAcc">									
+					<label for="lastName" class="labelInput">Lastname:</label><span class="redColor">&nbsp;&nbsp;</span>
+					<?php					
+						$lastName=array(
+							'id' => 'lastName',
+							'name' => 'lastName',
+							'class'=> '',
+							'value' => set_value('lastName'),
+							'maxLength' => 20					
+						);
+						echo form_input($lastName);
+					?>
+				</div>
+				<div id="emailContCreateAcc">				
+					<br /><label for="email1" class="labelInput">Email:</label><span class="redColor"> *</span>				
 				<?php 
 					$emailData1=array(
 						'name' => 'email1',
 						'id' => 'email1',
-						'value' => set_value('email1')
+						'value' => set_value('email1'),
+						'maxLength' => 40
 					);
 					echo form_input($emailData1);
 				?>
-				
-				<br /><label for="password1" class="labelInput">Password:</label><span class="redColor"> *</span>
-				<?php 
-					$passwordData1=array(
-						'id' => 'password1',
-						'name' => 'password1',
-						'class'=> 'password'
-					);
-					echo form_password($passwordData1);
-				?>
+				</div>
+				<div id="passwContCreateAcc">
+					<label for="password1" class="labelInput">Password:</label><span class="redColor"> *</span>
+					<?php 
+						$passwordData1=array(
+							'id' => 'password1',
+							'name' => 'password1',
+							'class'=> 'password',
+							'maxLength' => 20
+						);
+						echo form_password($passwordData1);
+					?>				
 				<input type="checkbox" class="showPassword"/>
-				<br /><label for="password2" class="labelInput">Repeat password:</label><span class="redColor"> *</span>
+				</div>
+				<div id="passw2ContCreateAcc">			
+					<label for="password2" class="labelInput">Repeat password:</label><span class="redColor"> *</span>
 				<?php 
 					$passwordData2=array(
 						'id' => 'password2',
 						'name' => 'password2',
-						'class'=> 'password'
+						'class'=> 'password',
+						'maxLength' => 20
 					);
 					echo form_password($passwordData2);
+				?>
+				</div>
+				<div id="submContCreateAcc">				
+					<?php
 					$submitData1=array(
-							'name' => 'buttonSubmit1',
-							'id' => 'buttonSubmit1',
-							'class' => 'button0',
-							'value' => 'Apply'						
-						);
-						echo form_submit($submitData1);
-				?>				
-				<?php
-					echo form_close();
-				?>				
+						'name' => 'buttonSubmit1',
+						'id' => 'buttonSubmit1',
+						'class' => 'button0',
+						'value' => 'Apply'						
+					);
+					echo form_submit($submitData1);				
+					?>		
+				</div>
+				<?php echo form_close(); ?>		
 			</div>				
 					
 </section>

@@ -1,4 +1,5 @@
 @CHARSET "ISO-8859-1";
+/*--------------------------------MAIN CONTAINER FOR PAGE----------------------------------------*/
 #sectionContent0{
 	margin: 0.5% auto;
 	width: 60%;
@@ -14,6 +15,13 @@
 	flex-direction: column;
 	align-items:center;
 }
+/*--------------------------------FIRST PART OF PAGE------------------------------------------*/
+/*Display only of an account successfully was created*/
+#accountCreated{
+	color:green;
+	margin-left:125px;
+}
+/*---------------Main container for create account input------------------*/
 #inputContainer{
 	width:35%;
 	height:150px;	
@@ -26,14 +34,6 @@
 	flex-direction: column;
 	/*align-items:flex-start;*/
 	/*border:1px solid red;*/		
-}
-.redColor{
-	color: red;
-}
-.labelInput{
-	text-align: right;	
-	width: 30%;
-	/*border:1px solid yellow;*/	
 }
 #loginForm{
 	/*border:1px solid green;*/
@@ -56,6 +56,7 @@
 	display: flex;
 	flex-direction: row;
 	/*align-items:start;*/
+	margin-top:1%;
 }
 #passwordLoginCont{
 	/*--------------Google Crome and Opera----------------------*/	
@@ -66,6 +67,7 @@
 	display: flex;
 	flex-direction: row;
 	/*align-items:start;*/	
+	margin-top:1%;
 }
 #buttonSubmitLoginCont{
 	/*--------------Google Crome and Opera----------------------*/	
@@ -77,17 +79,6 @@
 	flex-direction: column;
 	align-items:center;	
 	margin-top: 2%;
-}
-/*--------------------------------FIRST PART OF PAGE------------------------------------------*/
-#createAccountContent{
-	width:400px;
-	height:200px;
-	margin: 20px auto;
-	display:none;	
-}
-#createAccount{
-	font-size: 15px;	
-	color: #990000;	
 }
 #linkLoginCont{
 	width:100%;	
@@ -104,9 +95,86 @@
 	font-size: 75%;
 	color: white;
 	/*margin-left:125px;*/
-	border:1px solid green;
+	/*border:1px solid green;*/
 	width:50%;	
 }
+.redColor{
+	color: red;
+}
+/*--------------------------------SECOND PART OF PAGE------------------------------------------*/
+#createAccountContent{
+	width:35%;
+	height:200px;
+	/*margin: 20px auto;*/
+	border:1px solid red;
+	display:none;
+	
+	/*--------------Google Crome and Opera----------------------*/	
+	/*display: -webkit-flex;*/
+	/*-webkit-flex-direction: column;*/
+	/*-webkit-align-items:center;*/
+	/*--------------Firefox, explorer, W3C----------------------*/	
+	flex-direction: column;
+	align-items:flex-start;		
+}
+#formCreateAccount{
+	border:1px solid red;
+	width: 100%;
+	/*--------------Firefox, explorer, W3C----------------------*/	
+	display:flex;
+	flex-direction:column;
+	/*align-items:flex-start;*/
+}
+#createAccount{
+	font-size: 15px;	
+	color: #990000;	
+}
+#fNameContCreateAcc{
+	display: flex;
+	flex-direction:row;
+	/*align-items:flex-start;*/
+	margin-top:1%;	
+}
+#lNameContCreateAcc{
+	display: flex;
+	flex-direction:row;	
+	/*align-items:flex-start;*/
+	margin-top:1%;
+}
+#emailContCreateAcc{
+	display: flex;
+	flex-direction:row;
+	/*align-items:flex-start;*/
+	margin-top:1%;	
+}
+#passwContCreateAcc{
+	display: flex;
+	flex-direction:row;
+	/*align-items:flex-start;*/
+	margin-top:1%;	
+}
+#passw2ContCreateAcc{
+	display: flex;
+	flex-direction:row;
+	/*align-items:flex-start;	*/
+	margin-top:1%;
+}
+#submContCreateAcc{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	/*border:1px solid green;*/
+	/*width: 80%;*/	
+	margin-top:2%;
+}
+
+/*Classes for both part of subpages in login.php*/
+.labelInput{
+	text-align: right;	
+	width: 30%;
+	/*border:1px solid yellow;*/	
+}
+/*For displaying error messages if forms are incorrect typed*/
 .error{
 	margin-left:150px;
 	color: red;
@@ -118,13 +186,13 @@
 	background-color: #990000;
 	color: white;
 }
-#accountCreated{
-	color:green;
-	margin-left:125px;
-}
+/*-------------------------Media tag for responsive webdesign-----------------------------*/
 @media only screen and (min-width:601px) and (max-width:1200px){	
 	#inputContainer{
 		width:80%;		
+	}
+	#createAccountContent{
+		width:80%;	
 	}
 }
 @media only screen and (min-width:1px) and (max-width:600px){
@@ -132,7 +200,9 @@
 		width: 100%		
 	}
 	#inputContainer{
-		width:100%;
-		
+		width:100%;		
+	}
+	#createAccountContent{
+		width:100%;	
 	}
 }
