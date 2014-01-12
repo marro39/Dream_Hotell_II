@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 #section_content_booking1{
 	width:60%;
-	min-height: 400px;
+	min-height: 450px;
 	/*border: 1px dashed orange;*/
 	margin: 0.5% auto;
 	background-color: #000000; 
@@ -219,10 +219,11 @@
 	/*align-items:center;*/
 	
 	/*---------------------EXPLORER 10--------------------------------------------------*/
+/*	
 	display: -ms-flexbox;
 	-ms-flex-direction:column;
 	-ms-flex-pack:center;	
-	
+	*/
 	/*---------------------W3C---------------------------------------------------------*/
 	display:box;
 	box-orient:vertical;

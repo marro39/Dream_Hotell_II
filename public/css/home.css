@@ -6,7 +6,7 @@
 	margin: 0.5% auto;
 }
 #textBlock{
-	height:300px;
+	min-height:100px;
 	width:100%;
 	margin:0% auto; 
 	padding-top:5px;	
@@ -21,6 +21,8 @@
 	text-align:center;	
 	width:80%;	
 	margin:0% auto;
+	min-height: 100px;
+	/*border:1px solid red;*/
 }
 #contPictures{		
 	clear:both;
@@ -54,7 +56,7 @@
 	text-align: center;
 }
 /*Adjustments mainly for mobile phones*/
-@media only screen and (max-width:600px) and (min-width:150px){
+@media only screen and (max-width:600px) and (min-width:1px){
 	#article_content1{	
 		width: 100%;
 		padding-left: 10px;

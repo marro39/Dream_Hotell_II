@@ -23,13 +23,12 @@
 			<div id="titleAndMenu">
 				<div id="title">
 					<h2 id="headingTitle">Hotell Dream II</h2>	
-				</div>					
-				<div>				
+				</div>													
 				<nav id="menu">
 					<ul id="mainNav">
 						<li class="liMainMenu"><a href="<?php echo base_url()?>main" >Home</a></li>
 						<li class="liMainMenu"><a href="<?php echo base_url()?>main/booking" >Booking</a></li>
-						<li class="liMainMenu"><a href="#" >About&nbsp;&nbsp;<span class="dArrow">&#9660;</span></a>
+						<li id="menuAbout" class="liMainMenu"><a href="#" >About&nbsp;<span class="dArrow">&#9660;</span></a>
 							<ul class="subNav">									
 								<li class="liSubMenu"><a href="#" >Contact</a></li>
 								<li class="liSubMenu"><a href="<?php echo base_url()?>main/locate" >Locate</a></li>																						
@@ -47,13 +46,17 @@
 							}
 						?>								
 					</ul>										
-					<span id="spanMenuMarked" data-menuClicked="<?php echo $navMenuClicked ?>"></span>						
-				</nav>
-				</div>					
+					<?php 
+						if(isset($home1)){
+							echo "<span id=\"spanHome\" data-menuHome=\"" . $home1 . "\"></span>";	
+						}					
+					?>					
+					<span id="spanMenuMarked" data-menuClicked="<?php echo $navMenuClicked ?>"></span>										
+				</nav>									
 			</div>						
 		</header>		
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/jQuery.js"></script>
-		<script type="text/javascript" src="<?php echo base_url()?>public/js/header/header1.js"></script>
+		<script type="text/javascript" src="<?php echo base_url()?>public/js/header/header.js"></script>
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/cycle2.js"></script>
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/jquery.cycle2.tile.min.js"></script>
 		<script type="text/javascript" src="<?php echo base_url()?>public/js/colorbox/colorbox.js"></script>

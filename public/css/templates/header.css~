@@ -50,8 +50,14 @@ a{
 }
 #menu{
 	/*display:block;*/
-	float:left;
-	height:auto;	
+	display:flex;
+	flex-direction:column;
+	align-items:center;	
+		
+	
+	/*float:left;*/
+	/*height:auto;*/
+	min-height: 50px;	
 	width:100%;
 	margin: 0.1% 0.5%;	
 	/*border:2px solid green;*/					

@@ -1,25 +1,33 @@
 $(document).ready(function(){
 	//var menuMarked= $('#spanMenuMarked').attr('name');
+	
 	var menuMarked= $('#spanMenuMarked').attr('data-menuClicked');
-	var homeadress='http://localhost/Dream_Hotell_II/main';	
+	//var homeadress='http://localhost/Dream_Hotell_II/main';
+	var homeadress='http://90.225.88.116/Dream_Hotell_II/main';	
 	//If homeadress is false the menu will have default color
 	var bHomeAdress=false;
 	//Set all menu false as a starter!
 	$('.liMainMenu').find('a').data('menuClicked',false);
 	$('#mainNav a').each(function(){			
-		alert($(this).attr('href'));		
-		if($(this).attr('href').indexOf(menuMarked) != -1 ){
+		//alert($(this).attr('href'));		
+		if($(this).attr('href').indexOf(menuMarked) != -1 ){					
 			if($(this).attr('href') == homeadress){
-				$(this).css('color','#FFFF66');
-				bHomeAdress=true;
-				$(this).data('menuClicked', true);
-			}
-			else if(bHomeAdress==false){
-				$(this).css('color','#FFFF66');
-				$(this).data('menuClicked', true);
+				if($('#spanHome').attr('data-menuHome')){				
+					$(this).css('color','#FFFF66');
+					bHomeAdress=true;
+					$(this).data('menuClicked', true);					
+				}				
 			}			
-		}			
-	});		
+			else if(bHomeAdress==false){								
+				$(this).css('color','#FFFF66');
+				$(this).data('menuClicked', true);
+				if(menuMarked == "locate"){
+					$('#menuAbout').css('color','#FFFF66');	
+				}
+			}			
+		}					
+	});
+	//alert($('#spanHome').attr('data-menuHome'));			
 	/* This function is no longer needed because the whole page is reloaded on each a href click!
 	$('.liMainMenu').find('a').click(function(){		
 		$('.liMainMenu').find('a').data('menuClicked',false);
@@ -28,17 +36,19 @@ $(document).ready(function(){
 		$(this).css('color','#FFFF66');				
 	});	
 	*/	
-	$('.liMainMenu').hover(function(){
+	$('.liMainMenu').hover(function(){		
 		if($(this).find('a').data('menuClicked')==false){			
-			$(this).find('a').css('color','#707070');
-		}		
-		$(this).find('li').css('display','block');
+			$(this).find(' > a').css('color','#FBCB09').css('font-weight','bold');
+		}				
+		$(this).find('ul').css('display','block');
+		//alert('Hover');
 	}, function(){				
 			if($(this).find('a').data('menuClicked')==false){
-				$(this).find('a').css('color','#FCFFF0');				
+				$(this).find('a').css('color','#FCFFF0').css('font-weight','normal');				
 			}			
-			$(this).find('li').css('display','none');		
-	});		
+			$(this).find('ul').css('display','none');		
+	});	
+	
 	$('.liSubMenu').hover(function(){
 		$(this).find('a').css('color','#707070');
 	},function(){

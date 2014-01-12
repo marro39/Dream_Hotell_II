@@ -5,7 +5,8 @@ class Main extends CI_Controller {
 	private $fromDate, $toDate;
 	public function index(){		
 		$this->data['title'] = 'Hotel Dream II - Home';
-		$this->data['navMenuClicked'] ='main';				
+		$this->data['navMenuClicked'] ='main';	
+		$this->data['home1'] = true;				
 		//Get all room picture names from database!
 		$this->load->model('model_room');
 		$roomPics['rooms']=$this->model_room->getRooms();
@@ -14,6 +15,19 @@ class Main extends CI_Controller {
 		$this->load->view('home', $roomPics);		
 		$this->load->view('/templates/footer');					
 	}
+	public function about(){
+		$this->data['title'] = 'Hotel Dream II - About';
+		$this->data['navMenuClicked'] ='about';						
+		
+		//Get all room picture names from database!
+		$this->load->model('model_room');
+		$roomPics['rooms']=$this->model_room->getRooms();
+		//echo count($rooms);		
+		$this->load->view('/templates/header', $this->data);
+		$this->load->view('home', $roomPics);		
+		$this->load->view('/templates/footer');
+			
+	}	
 	public function login(){
 		if($this->session->userdata('access_level')){
 			$this->session->sess_destroy();
@@ -27,7 +41,8 @@ class Main extends CI_Controller {
 	}
 	public function locate(){
 		$this->data['title'] = 'Hotel Dream II - Locate';
-		$this->data['navMenuClicked'] ='locate';
+		//$this->data['navMenuClicked'] ='locate';
+		$this->data['navMenuClicked'] ='about';
 		$this->load->view('/templates/header', $this->data);
 		$this->load->view('locate');
 		$this->load->view('/templates/footer');		

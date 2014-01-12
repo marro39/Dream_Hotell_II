@@ -3,21 +3,18 @@
 				<div id="textBlock">
 					<header>
 						<h3 id="section_heading" >Welcome dear guest!</h3>
-					</header>										
-					<content >
+					</header>					
 						<p id="content_text1">
 							* * * * * This site is for education purposes only * * * * *<br>						
-							We are happy to announce that in spring 2013 major renovations were made. <br />
-							Every room has been updated to match todays standard <br />
-							Our casino is now larger, more effective and more comfortable so all <br />
-							our customers will now hopefully be satisfied. <br />
-							Please view our recent taken pics of the renovations of the hotel.<br /> 
-							You are gladly welcome to book a room or a complete package. <br />
-							You can also buy tickets to our shows. Some packages includes shows. <br />
-							Please click the show tab in the menu to <br />
-							see this years performanses.
-						</p>	
-					</content>					
+							We are happy to announce that in spring 2013 major renovations were made. <br>
+							Every room has been updated to match todays standard.<br>
+							Our casino is now larger, more effective and more comfortable so all</br> 
+							our customers will now hopefully be satisfied. </br>
+							Please view our recent taken pics of the renovations of the hotel.</br> 
+							You are gladly welcome to book a room or a complete package. <br>
+							You can also buy tickets to our shows. Some packages includes shows.<br> 
+							Please click the show tab in the menu to see this years performanses. <br>
+						</p>											
 				</div>					
 				<?php 					
 					$roomExt=array();
