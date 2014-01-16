@@ -57,7 +57,17 @@ class Administrate extends CI_Controller {
 			}
 				
 		}			
-	}		
+	}
+	public function showLastPicNames(){
+		if($this->session->userdata('access_level') == 3){
+			if($this->input->post('getLastPicName')){
+				$this->load->model('model_room');	
+				$lastPicNames=$this->model_room->getLastPicNames();		
+				echo json_encode($lastPicNames);
+			}	
+		}		
+			
+	}	
 	public function uploadPicture(){
 		
 	}

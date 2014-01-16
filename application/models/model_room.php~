@@ -12,6 +12,57 @@ class Model_Room extends CI_Model {
         // Call the Model constructor
         parent::__construct();
     }
+	/*Get the last row with picName for each pic category*/	   
+   public function getLastPicNames(){
+			$aLastPicNames=array();   		
+   		$this->db->select('*');
+   		$this->db->from('tblPicExt');
+   		if($query=$this->db->get()){
+   			$row=$query->last_row();
+   			$aTempLastPic=array(
+					'counter' => $row->counter,
+					'picName' => $row->picExt   			
+   			);	
+   			array_push($aLastPicNames,$aTempLastPic);
+   			
+   			$this->db->select('*');
+   			$this->db->from('tblPicInt');
+   			if($query=$this->db->get()){
+   				$row=$query->last_row();
+   				$aTempLastPic=array(
+						'counter' => $row->counter,
+						'picName' => $row->picInt						   				
+   				);
+   				array_push($aLastPicNames,$aTempLastPic);
+   				
+   				$this->db->select('*');
+	   			$this->db->from('tblPicRoom');
+	   			if($query=$this->db->get()){
+	   				$row=$query->last_row();
+	   				$aTempLastPic=array(
+						'counter' => $row->counter,
+						'picName' => $row->picRoom																		   				
+   					);
+   					array_push($aLastPicNames,$aTempLastPic);
+	   				
+	   				$this->db->select('*');
+	   				$this->db->from('tblRoomExample');
+	   				if($query=$this->db->get()){
+	   					$row=$query->last_row();
+	   					$aTempLastPic=array(
+								'counter' => $row->roomId,
+								'picName' => $row->room																		   				
+   						);	
+   						array_push($aLastPicNames,$aTempLastPic);
+   						return json_encode($aLastPicNames);	
+	   				}		
+	   			}
+   			}
+   			
+   			
+   			
+   		}
+   }
 	function getRooms(){
 		$rooms=array();
 		$this->load->database();
@@ -85,7 +136,7 @@ class Model_Room extends CI_Model {
 	}
 	public function delSelBooking($bookId){
 		if($this->session->userdata('access_level') >= 3){
-			$this->db->where('bookId',$bookId));			
+			$this->db->where('bookId',$bookId);			
 			if($this->db->delete('tblBooking')){
 				return true;	
 			}

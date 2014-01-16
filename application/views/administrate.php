@@ -97,6 +97,18 @@
 		<!--******Upload picture***************************** -->
 		<article id="upload_pic_wrapper">						
 			<header><h3>Upload picture</h3></header>						
+			<h4>Below follows a table with information about picture category, last uploaded picture and the amount of pictures for each category</h4>
+			<table id="tablePicInformationAdmin">
+				<thead>
+					<tr><td>Category</td><td>Name</td><td>Amount pic</td></tr>				
+				</thead>
+				<tbody>
+				
+				</tbody>
+					
+			</table>
+			<p>Please name files as the last file in each category and add +1 for pic number. For example: ceasars_palace_extX.</p>							
+			<p>In the select option you choose which folder you want to put the picture in. For an external picture select: External pic etc</p>			
 			<?php
 				//echo $error;			
 				echo form_open_multipart('administrate/uploadPicture');
@@ -112,7 +124,7 @@
 				$roomSubmitInfo=array(
 					'id' => 'uploadSubmitAdmin',
 					'name' => 'uploadSubmitAdmin',
-					'value' => 'Login',
+					'value' => 'Upload',
 					'class' => ''
 				);				
 				echo form_submit($roomSubmitInfo);				

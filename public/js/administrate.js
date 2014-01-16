@@ -2,6 +2,7 @@ $(document).ready(function(){
 /***********************************DELETE BOOKING***********************************************/	
 	$('#delete_booking').click(function(){				
 		$('#delete_booking_wrapper').slideDown(function(){							
+			$('#upload_pic_wrapper').css('display','none');				
 			//Google crome and Opera 			
 			$('#delete_booking_wrapper').css('display','-webkit-flex');
 			//Explorer, firefox and w3c
@@ -89,12 +90,30 @@ $(document).ready(function(){
 	});
 /**************************UPLOAD PICTURE****************************************************/
 	$('#uploadPictureAdmin').click(function(){		
+		$('#delete_booking_wrapper').css('display','none');		
 		$('#upload_pic_wrapper').slideDown(function(){						
 			/*----------------Crome and Opera-------------------------------------*/		
 			$('#upload_pic_wrapper').css('display','-webkit-flex');
 			/*------------------Explorer, firefox W3C*/
 			$('#upload_pic_wrapper').css('display','flex');	
-			/*alert('picture');*/	
+			/*alert('picture');*/			
+			$.ajax({
+					type:'POST',
+					url:'../administrate/showLastPicNames',
+					dataType: 'json',
+					data: {'getLastPicName':'lastPicName'},
+					success: function(data){
+						var objRoomInformation=JSON.parse(data);						
+						$('#tablePicInformationAdmin tbody').empty();
+						$('#tablePicInformationAdmin tbody').append('<tr><td>External hotel pic</td><td>' + objRoomInformation[0].picName + '</td><td>' + objRoomInformation[0].counter + '</td></tr>');
+						$('#tablePicInformationAdmin tbody').append('<tr><td>Internal hotel pic</td><td>' + objRoomInformation[1].picName + '</td><td>' + objRoomInformation[1].counter + '</td></tr>');
+						$('#tablePicInformationAdmin tbody').append('<tr><td>Rooms pic</td><td>' + objRoomInformation[2].picName + '</td><td>' + objRoomInformation[2].counter + '</td></tr>');
+						$('#tablePicInformationAdmin tbody').append('<tr><td>Room examples pic</td><td>' + objRoomInformation[3].picName + '</td><td>' + objRoomInformation[3].counter + '</td></tr>');     
+					}						
+			}).error(function(){
+				alert('Something went wrong loading pic names! Pleast try again');	
+			});
+			
 		});		
 		
 	});	
