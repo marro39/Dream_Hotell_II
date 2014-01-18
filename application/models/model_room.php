@@ -58,10 +58,7 @@ class Model_Room extends CI_Model {
    						return json_encode($aLastPicNames);	
 	   				}		
 	   			}
-   			}
-   			
-   			
-   			
+   			}   			
    		}
    }
 	function getRooms(){

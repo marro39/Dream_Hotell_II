@@ -54,6 +54,7 @@ class Model_Room extends CI_Model {
 								'picName' => $row->room																		   				
    						);	
    						array_push($aLastPicNames,$aTempLastPic);
+							$this->db->close();   						
    						return json_encode($aLastPicNames);	
 	   				}		
 	   			}

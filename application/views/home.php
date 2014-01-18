@@ -51,7 +51,7 @@
 	        			</div>												
 						<?php 
 							for ($i=0; $i < count($roomExt); $i++) { 
-								echo "<img class=\"hotelPictures\" src=\"" . base_url() . "public/img/" . $roomExt[$i] . "jpg\" alt=\"" . base_url() . "public/img/" . $roomExt[$i] . "jpg\"  />";
+								echo "<img class=\"hotelPictures\" src=\"" . base_url() . "public/img/" . $roomExt[$i] . ".jpg\" alt=\"" . base_url() . "public/img/" . $roomExt[$i] . "jpg\"  />";
 							}
 						?>
 					</div>
@@ -68,7 +68,7 @@
 	        			</div>
 						<?php 
 							for ($i=0; $i < count($roomInt); $i++) { 
-								echo "<img class=\"hotelPictures\" src=\"" . base_url() . "public/img/" . $roomInt[$i] . "jpg\" alt=\"" . base_url() . "public/img/" . $roomInt[$i] . ".jpg\"  />";
+								echo "<img class=\"hotelPictures\" src=\"" . base_url() . "public/img/" . $roomInt[$i] . ".jpg\" alt=\"" . base_url() . "public/img/" . $roomInt[$i] . ".jpg\"  />";
 							}
 						?>
 					</div>

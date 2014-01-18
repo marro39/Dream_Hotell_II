@@ -72,7 +72,13 @@
 						</ul>
 					</li>				
 				</ul>
-			<div class="clear"></div>							
+			<div class="clear"></div>
+			<?php 
+				//if(isset($picStatus)){
+					echo "<span id=\"dataStatus\">" . $picStatus . "</span>";			
+				//}			
+			?>			
+										
 		</nav>
 <!--*******************************************Pages********************************************** -->		
 		<!--******Delete booking***************************** -->		
@@ -94,8 +100,9 @@
 			</div>
 			
 		</article>	
-		<!--******Upload picture***************************** -->
+		<!--******Upload picture*************************************************************** -->
 		<article id="upload_pic_wrapper">						
+			<p id="upPicStatusAdmin"></p>			
 			<header><h3>Upload picture</h3></header>						
 			<h4>Below follows a table with information about picture category, last uploaded picture and the amount of pictures for each category</h4>
 			<table id="tablePicInformationAdmin">
@@ -107,19 +114,21 @@
 				</tbody>
 					
 			</table>
-			<p>Please name files as the last file in each category and add +1 for pic number. For example: ceasars_palace_extX.</p>							
+			<p>Please name files as the last file in each category and add +1 for pic number. For example: ceasars_palace_extX</p>							
 			<p>In the select option you choose which folder you want to put the picture in. For an external picture select: External pic etc</p>			
 			<?php
 				//echo $error;			
 				echo form_open_multipart('administrate/uploadPicture');
 			?>	
-				<input type="file" name="uploadFile" id="uploadFile"/>
-				<select id="roomTypeAdmin">
+				<input type="file" name="userfile" id="userfile"/>
+				
+				<select id="roomTypeAdmin" name="roomTypeAdmin">
 					<option value="ext">External pic</option>
 					<option value="int">Internal pic</option>
 					<option value="room">Room example</option>
-					<option value="ext">Booking rooms</option>		
-				</select>				
+					<option value="book_room" selected="selected">Booking rooms</option>		
+				</select>
+								
 			<?php
 				$roomSubmitInfo=array(
 					'id' => 'uploadSubmitAdmin',
