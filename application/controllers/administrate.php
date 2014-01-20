@@ -104,9 +104,10 @@ class Administrate extends CI_Controller {
 			$this->load->library('upload',$config);
 			//$formName='uploadFile';			
 			
-			$aPicData=$this->upload->data();
-			$fileName=strstr($aPicData['file_name'], '.', TRUE);
-			$this->data['picStatus']=$fileName;	
+			//$aPicData=$this->upload->data();
+			//$fileName=strstr($aPicData['file_name'], '.', TRUE);
+			//$_FILES["userfile"]["name"]
+			$this->data['picStatus']=$_FILES["userfile"]["name"];	
 			$this->home();
 			/*
 			if($this->upload->do_upload()){
