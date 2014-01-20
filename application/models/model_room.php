@@ -190,7 +190,7 @@ class Model_Room extends CI_Model {
 	public function checkFileExist($fileName,$tblName,$fieldName){
 		$this->db->select('*');
 		$this->db->from($tblName);
-		$this->db->where($fieldName,$fileName);
+		$this->db->where($fieldName,$this->db->escape($fileName));
 		$query=$this->db->get();
 		if($query->num_rows() > 0){
 			return false;
