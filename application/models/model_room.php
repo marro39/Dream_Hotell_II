@@ -203,7 +203,7 @@ class Model_Room extends CI_Model {
 	} 
 	public function uploadPicDb($fileName,$picTbl,$fieldName){
 		$columns=array(
-			$fieldName => $this->db->escape($fileName)
+			$fieldName => $fileName
 		);		
 		if($this->db->insert($picTbl,$columns)){
 			$this->db->close();
