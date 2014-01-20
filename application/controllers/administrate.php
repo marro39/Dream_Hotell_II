@@ -75,7 +75,7 @@ class Administrate extends CI_Controller {
 	public function uploadPicture(){
 		
 		if($this->input->post('roomTypeAdmin')){
-			$picTbl;
+			$picTbl;$fieldName;
 			$folder=$this->input->post('roomTypeAdmin');						
 			$config=array(
 				'upload_path' => '',
@@ -87,19 +87,23 @@ class Administrate extends CI_Controller {
 			);		
 			if($folder=='ext'){
 				$config['upload_path']='./public/img';
-				$picTbl='tblPicExt';				
+				$picTbl='tblPicExt';	
+				$fieldName='picExt';			
 			}
 			else if($folder=='int'){
 				$config['upload_path']='./public/img';
 				$picTbl='tblPicInt';
+				$fieldName='picInt';
 			}
 			else if($folder=='room'){
 				$config['upload_path']='./public/img';
 				$picTbl='tblPicRoom';
+				$fieldName='picRoom';
 			}
 			else if($folder=='book_room'){
 				$config['upload_path']='./public/img/booking_rooms';
 				$picTbl='tblRoomExample';
+				$fieldName='room';
 			}			
 			$this->load->library('upload',$config);
 			//$formName='uploadFile';			
@@ -107,8 +111,27 @@ class Administrate extends CI_Controller {
 			//$aPicData=$this->upload->data();
 			//$fileName=strstr($aPicData['file_name'], '.', TRUE);
 			//$_FILES["userfile"]["name"]
-			$this->data['picStatus']=$_FILES["userfile"]["name"];	
-			$this->home();
+				
+			if($_FILES["userfile"]['error'] <= 0){
+				$fileName=strstr($_FILES["userfile"]["name"], '.', TRUE);
+				$this->load->model('model_room');
+				if($this->model_room->checkFileExist($fileName,$picTbl,$fieldName)){
+					$this->data['picStatus']='File dont exist!';
+					$this->home();
+				}
+				
+				//$this->data['picStatus']=$fileName;	
+				//$this->home();
+			}
+			else{
+				$this->data['picStatus']='File already exists!';
+				$this->home();
+			}
+			
+			
+			
+			
+			
 			/*
 			if($this->upload->do_upload()){
 				//$this->data['picStatus']=$this->upload->data();

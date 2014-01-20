@@ -187,12 +187,26 @@ class Model_Room extends CI_Model {
 			return json_encode('Failure');	
 		}		
 	}
-	public function uploadPicDb($fileName,$tblName){
+	public function checkFileExist($fileName,$tblName,$fieldName){
+		$this->db->select('*');
+		$this->db->from($tblName);
+		$this->db->where($fieldName,$fileName);
+		$query=$this->db->get();
+		if($query->num_rows() > 0){
+			return false;
+		}
+		else{
+			return true;
+		}
+			
+		/*	
 		$fileData=array(
 			'room' => $fileName
 		);
-		$this->db->insert($tblName,$fileData);
-		$this->db->close();
+		*/
+		
+		//$this->db->insert($tblName,$fileData);
+		//$this->db->close();
 	
 	} 
 }
