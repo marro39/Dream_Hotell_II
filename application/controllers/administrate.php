@@ -133,8 +133,8 @@ class Administrate extends CI_Controller {
 						$this->data['picStatus']='Error uploading file!';
 						$this->home();
 					}					
-					$this->data['picStatus']='File dont exist!';
-					$this->home();
+					//$this->data['picStatus']='File dont exist!';
+					//$this->home();
 				}
 				else{
 					$this->data['picStatus']='File already exists!';
