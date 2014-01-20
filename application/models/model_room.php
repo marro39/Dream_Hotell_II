@@ -193,20 +193,25 @@ class Model_Room extends CI_Model {
 		$this->db->where($fieldName,$this->db->escape($fileName));
 		$query=$this->db->get();
 		if($query->num_rows() > 0){
+			$this->db->close();	
 			return false;
 		}
 		else{
+			$this->db->close();	
 			return true;
-		}
-			
-		/*	
-		$fileData=array(
-			'room' => $fileName
-		);
-		*/
-		
-		//$this->db->insert($tblName,$fileData);
-		//$this->db->close();
-	
+		}			
 	} 
+	public function uploadPicDb($fileName,$picTbl,$fieldName){
+		$columns=array(
+			$fieldName => $this->db->escape($fileName)
+		);		
+		if($this->db->insert($picTbl,$columns)){
+			$this->db->close();
+			return true;	
+		}
+		else{
+			$this->db->close();
+			return false;
+		}		
+	}
 }

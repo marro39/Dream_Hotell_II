@@ -116,19 +116,35 @@ class Administrate extends CI_Controller {
 				$fileName=strstr($_FILES["userfile"]["name"], '.', TRUE);
 				$this->load->model('model_room');
 				if($this->model_room->checkFileExist($fileName,$picTbl,$fieldName)){
+					if($this->upload->do_upload()){
+						$aPicData=$this->upload->data();
+						$fileName=strstr($aPicData['file_name'], '.', TRUE);
+						
+						if($this->model_room->uploadPicDb($fileName,$picTbl,$fieldName)){
+							$this->data['picStatus']='Success! File uploaded!';
+							$this->home();
+						}
+						else{
+							$this->data['picStatus']='Error inserting file in db!';
+							$this->home();
+						}
+					}
+					else{
+						$this->data['picStatus']='Error uploading file!';
+						$this->home();
+					}					
 					$this->data['picStatus']='File dont exist!';
 					$this->home();
 				}
-				
-				//$this->data['picStatus']=$fileName;	
-				//$this->home();
+				else{
+					$this->data['picStatus']='File already exists!';
+					$this->home();
+				}				
 			}
 			else{
-				$this->data['picStatus']='File already exists!';
+				$this->data['picStatus']='Error1!';
 				$this->home();
 			}
-			
-			
 			
 			
 			
