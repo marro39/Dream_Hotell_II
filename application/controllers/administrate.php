@@ -58,8 +58,7 @@ class Administrate extends CI_Controller {
 				if($this->model_Room->delSelBooking($bookId)){
 					echo json_encode('Success! Selected booking is deleted!');
 				}					
-			}
-				
+			}				
 		}			
 	}
 	public function showLastPicNames(){
@@ -69,11 +68,9 @@ class Administrate extends CI_Controller {
 				$lastPicNames=$this->model_room->getLastPicNames();		
 				echo json_encode($lastPicNames);
 			}	
-		}		
-			
+		}			
 	}	
-	public function uploadPicture(){
-		
+	public function uploadPicture(){		
 		if($this->input->post('roomTypeAdmin')){
 			$picTbl;$fieldName;
 			$folder=$this->input->post('roomTypeAdmin');						
@@ -105,21 +102,13 @@ class Administrate extends CI_Controller {
 				$picTbl='tblRoomExample';
 				$fieldName='room';
 			}			
-			$this->load->library('upload',$config);
-			//$formName='uploadFile';			
-			
-			//$aPicData=$this->upload->data();
-			//$fileName=strstr($aPicData['file_name'], '.', TRUE);
-			//$_FILES["userfile"]["name"]
-				
+			$this->load->library('upload',$config);				
 			if($_FILES["userfile"]['error'] <= 0){
 				$fileName=strstr($_FILES["userfile"]["name"], '.', TRUE);
 				$this->load->model('model_room');
 				if($this->model_room->checkFileExist($fileName,$picTbl,$fieldName)){
 					if($this->upload->do_upload()){
-						$aPicData=$this->upload->data();
-						//$fileName=strstr($aPicData['file_name'], '.', TRUE);
-						
+						$aPicData=$this->upload->data();						
 						if($this->model_room->uploadPicDb($fileName,$picTbl,$fieldName)){
 							$this->data['picStatus']='Success! File uploaded!';
 							$this->home();
@@ -133,8 +122,6 @@ class Administrate extends CI_Controller {
 						$this->data['picStatus']='Error uploading file!';
 						$this->home();
 					}					
-					//$this->data['picStatus']='File dont exist!';
-					//$this->home();
 				}
 				else{
 					$this->data['picStatus']='File already exists!';
@@ -144,35 +131,9 @@ class Administrate extends CI_Controller {
 			else{
 				$this->data['picStatus']='Error1!';
 				$this->home();
-			}
-			
-			
-			
-			/*
-			if($this->upload->do_upload()){
-				//$this->data['picStatus']=$this->upload->data();
-				//$this->data['picStatus']=$folder;
-				//$this->data['picStatus']='Success upload picture1';
-				$aPicData=$this->upload->data();
-				$fileName=strstr($aPicData['file_name'], '.', TRUE);				
-				$this->data['picStatus']=$fileName;			
-				//$this->data['picStatus']=$this->upload->data();
-				$this->load->model('model_room');
-				$this->model_room->uploadPicDb($fileName,$picTbl);
-				$this->home();
-			}
-			
-			
-			else{
-				//$this->data['picStatus']='Failed upload picture';
-				$this->data['picStatus']=$this->upload->display_errors();
-				//$this->data['picStatus']=$folder;
-				$this->home();
-			}	
-			*/			
+			}			
 		}			
-	}
-	
+	}	
 }
 
 
