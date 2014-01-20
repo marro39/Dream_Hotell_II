@@ -118,7 +118,7 @@ class Administrate extends CI_Controller {
 				if($this->model_room->checkFileExist($fileName,$picTbl,$fieldName)){
 					if($this->upload->do_upload()){
 						$aPicData=$this->upload->data();
-						$fileName=strstr($aPicData['file_name'], '.', TRUE);
+						//$fileName=strstr($aPicData['file_name'], '.', TRUE);
 						
 						if($this->model_room->uploadPicDb($fileName,$picTbl,$fieldName)){
 							$this->data['picStatus']='Success! File uploaded!';
