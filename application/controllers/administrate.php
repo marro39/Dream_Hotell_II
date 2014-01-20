@@ -75,6 +75,7 @@ class Administrate extends CI_Controller {
 	public function uploadPicture(){
 		
 		if($this->input->post('roomTypeAdmin')){
+			$picTbl;
 			$folder=$this->input->post('roomTypeAdmin');						
 			$config=array(
 				'upload_path' => '',
@@ -84,14 +85,30 @@ class Administrate extends CI_Controller {
 				'max_filename' => 30,
 				'remove_spaces' => TRUE					
 			);		
-			if($folder=='ext' || $folder=='int' || $folder=='room'){
-				$config['upload_path']='./public/img';					
+			if($folder=='ext'){
+				$config['upload_path']='./public/img';
+				$picTbl='tblPicExt';				
+			}
+			else if($folder=='int'){
+				$config['upload_path']='./public/img';
+				$picTbl='tblPicInt';
+			}
+			else if($folder=='room'){
+				$config['upload_path']='./public/img';
+				$picTbl='tblPicRoom';
 			}
 			else if($folder=='book_room'){
 				$config['upload_path']='./public/img/booking_rooms';
+				$picTbl='tblRoomExample';
 			}			
 			$this->load->library('upload',$config);
-			//$formName='uploadFile';						
+			//$formName='uploadFile';			
+			
+			$aPicData=$this->upload->data();
+			$fileName=strstr($aPicData['file_name'], '.', TRUE);
+			$this->data['picStatus']=$fileName;	
+			$this->home();
+			/*
 			if($this->upload->do_upload()){
 				//$this->data['picStatus']=$this->upload->data();
 				//$this->data['picStatus']=$folder;
@@ -100,15 +117,19 @@ class Administrate extends CI_Controller {
 				$fileName=strstr($aPicData['file_name'], '.', TRUE);				
 				$this->data['picStatus']=$fileName;			
 				//$this->data['picStatus']=$this->upload->data();
+				$this->load->model('model_room');
+				$this->model_room->uploadPicDb($fileName,$picTbl);
 				$this->home();
 			}
+			
+			
 			else{
 				//$this->data['picStatus']='Failed upload picture';
 				$this->data['picStatus']=$this->upload->display_errors();
 				//$this->data['picStatus']=$folder;
 				$this->home();
 			}	
-							
+			*/			
 		}			
 	}
 	

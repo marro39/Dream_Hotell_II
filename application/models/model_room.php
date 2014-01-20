@@ -186,5 +186,13 @@ class Model_Room extends CI_Model {
 		else{
 			return json_encode('Failure');	
 		}		
+	}
+	public function uploadPicDb($fileName,$tblName){
+		$fileData=array(
+			'room' => $fileName
+		);
+		$this->db->insert($tblName,$fileData);
+		$this->db->close();
+	
 	} 
 }
