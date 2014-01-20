@@ -192,7 +192,7 @@ class Model_Room extends CI_Model {
 		$this->db->from($tblName);
 		$this->db->where($fieldName,$fileName);
 		$query=$this->db->get();
-		if($query->num_rows() > 0){
+		if($query->num_rows() >= 1){
 			$this->db->close();	
 			return false;
 		}
