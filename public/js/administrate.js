@@ -18,9 +18,7 @@ $(document).ready(function(){
 	},3000);
 	
 	/***********************************DELETE BOOKING**********************************************************************************************************************/	
-	$('#delete_booking').click(function(){
-		//Clear uploadPicData from UPLOAD PICTURE section in this file!
-		uploadPic.innerHTML='';
+	$('#delete_booking').click(function(){		
 		$('#delete_booking_wrapper').slideDown(function(){							
 			$('#upload_pic_wrapper').css('display','none');				
 			//Google crome and Opera 			
