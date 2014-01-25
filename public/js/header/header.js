@@ -14,6 +14,7 @@ $(document).ready(function(){
 			if($(this).attr('href') == homeadress){
 				if($('#spanHome').attr('data-menuHome')){				
 					$(this).css('color','#FFFF66');
+					$(this).css('box-shadow', 'inset 0px 30px 0px rgba(0,0,255,0.3)');
 					bHomeAdress=true;
 					$(this).data('menuClicked', true);					
 				}				
