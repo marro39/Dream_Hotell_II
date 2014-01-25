@@ -17,14 +17,14 @@ a{
 	margin: 0.5% auto;
 	width: 60%;
 	min-height: 130px;	
-	/*background-color: #000000;*/
+	background-color: #000000;
 	border-radius: 10px 10px 0px 0px;	
 	/*Important! Overflow hidden will expand the div when the nested menu expands*/
 	overflow:hidden;
-	
-	border:1px solid black;	
-	
+	/*
+	border:1px solid black;		
 	box-shadow: inset 0% 100% 0px rgba(255,255,255,0.5);
+	*/
 }
 #imageLogo{
 	height: 100px;

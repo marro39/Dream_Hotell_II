@@ -25,7 +25,7 @@ $(document).ready(function(){
 				$(this).data('menuClicked', true);
 				if(menuMarked == "locate"){
 					$('#menuAbout').css('color','#FFFF66');	
-					$(this).css('box-shadow', 'inset 0px 30px 0px rgba(0,0,255,0.2)');
+					$('#menuAbout').css('box-shadow', 'inset 0px 30px 0px rgba(0,0,255,0.2)');
 				}
 			}			
 		}					
