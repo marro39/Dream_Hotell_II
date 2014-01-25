@@ -13,12 +13,10 @@ $(document).ready(function(){
 		uploadPic.style.color='red';
 	}
 	var picStatusInterval=setInterval(function(){
-		uploadPic.innerHTML=='';
+		uploadPic.innerHTML='';
 		clearInterval(picStatusInterval);
 	},3000);
 	
-		
-	alert(uploadPic.id);
 	/***********************************DELETE BOOKING**********************************************************************************************************************/	
 	$('#delete_booking').click(function(){
 		//Clear uploadPicData from UPLOAD PICTURE section in this file!
