@@ -14,18 +14,18 @@ $(document).ready(function(){
 			if($(this).attr('href') == homeadress){
 				if($('#spanHome').attr('data-menuHome')){				
 					$(this).css('color','#FFFF66');
-					$(this).css('box-shadow', 'inset 0px 30px 0px rgba(0,0,255,0.2)');
+					$(this).css('box-shadow', 'inset 0px 30px 0px rgba(190,190,190,0.2)');
 					bHomeAdress=true;
 					$(this).data('menuClicked', true);					
 				}				
 			}			
 			else if(bHomeAdress==false){								
 				$(this).css('color','#FFFF66');
-				$(this).css('box-shadow', 'inset 0px 30px 0px rgba(0,0,255,0.2)');
+				$(this).css('box-shadow', 'inset 0px 30px 0px rgba(190,190,190,0.2)');
 				$(this).data('menuClicked', true);
 				if(menuMarked == "locate"){
 					$('#menuAbout').css('color','#FFFF66');	
-					$('#menuAbout').css('box-shadow', 'inset 0px 30px 0px rgba(0,0,255,0.2)');
+					$('#menuAbout').css('box-shadow', 'inset 0px 30px 0px rgba(190,190,190,0.2)');
 				}
 			}			
 		}					
@@ -42,7 +42,7 @@ $(document).ready(function(){
 	$('.liMainMenu').hover(function(){		
 		if($(this).find('a').data('menuClicked')==false){			
 			$(this).find(' > a').css('color','#FBCB09').css('font-weight','bold');
-			$(this).find(' > a').css('box-shadow', 'inset 0px 30px 0px rgba(0,0,255,0.1)');
+			$(this).find(' > a').css('box-shadow', 'inset 0px 30px 0px rgba(190,190,190,0.1)');
 			//$(this).find(' > a').css('box-shadow', 'inset 0% 100% 3px rgba(0,0,0,0.3)');
 		}				
 		$(this).find('ul').css('display','block');
@@ -50,7 +50,7 @@ $(document).ready(function(){
 	}, function(){				
 			if($(this).find('a').data('menuClicked')==false){
 				$(this).find('a').css('color','#FCFFF0').css('font-weight','normal');
-				$(this).find(' > a').css('box-shadow', 'inset 0px 0px 0px rgba(0,0,0,1.0)');
+				$(this).find(' > a').css('box-shadow', 'inset 0px 0px 0px rgba(190,190,190,1.0)');
 			}			
 			$(this).find('ul').css('display','none');		
 	});	
