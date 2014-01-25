@@ -1,5 +1,15 @@
 $(document).ready(function(){	
 	var uploadPic=document.getElementById('uploadPicStatus');
+	if(uploadPic.innerHTML==''){
+		alert('Empty');
+	}
+	else if(uploadPic.innerHTML=='Success! File uploaded!'){
+		alert('Success!');
+	}
+	else{
+		alert('Error!');
+	}
+		
 	alert(uploadPic.id);
 	/***********************************DELETE BOOKING**********************************************************************************************************************/	
 	$('#delete_booking').click(function(){				
