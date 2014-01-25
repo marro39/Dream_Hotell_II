@@ -93,7 +93,7 @@
 					<tbody>					
 					</tbody>
 				</table>	
-				<input type="button" id="adminDeleteBooking">Delete booking</button>						
+				<input type="button" id="adminDeleteBooking" value="Delete booking" />						
 			</div>
 			<div id="confDelBooking" title="Delete booking">
 				<p>Are you sure you want to delete selected booking?</p>			
