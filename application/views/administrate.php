@@ -74,9 +74,9 @@
 				</ul>
 			<div class="clear"></div>
 			<?php 
-				//if(isset($picStatus)){
-					echo "<span id=\"dataStatus\">" . $picStatus . "</span>";			
-				//}			
+				if(isset($picStatus)){
+					echo "<span id=\"uploadPicStatus\">" . $picStatus . "</span>";			
+				}			
 			?>			
 										
 		</nav>
@@ -114,8 +114,10 @@
 				</tbody>
 					
 			</table>
-			<p>Please name files as the last file in each category and add +1 for pic number. For example: ceasars_palace_extX</p>							
-			<p>In the select option you choose which folder you want to put the picture in. For an external picture select: External pic etc</p>			
+			<p>Please name files as the last file in each category.<br />
+				Add +1 for pic number.<br />
+				For example: ceasars_palace_extX</p>							
+			<p>In the select option choose which folder you want to put the picture in.</p>			
 			<?php
 				//echo $error;			
 				echo form_open_multipart('administrate/uploadPicture');

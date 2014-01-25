@@ -298,7 +298,7 @@ ul#menulistAdmin li:hover a:hover{
         
         /*-------------Google crome and Opera---------*/
         	-webkit-flex-direction:column;
-       	-webkit-justify-content:flex-start;        	
+       		-webkit-justify-content:flex-start;        	
         /*-------------Explorer, Firefox and W3C------*/
         	flex-direction:column;        
         	justify-content:flex-start;  
@@ -390,18 +390,16 @@ p{
 	padding:0%;	
 }
 
- 
-
 
 @media only screen and (min-width:1px) and (max-width:600px){
 		#sectionAdministrate1{
 			width: 100%;	
 		}
 		#navContAdministrate{			        
-        width:100%;    	
+        	width:100%;    	
 		}
 		ul#menulistAdmin li{  
-      	width:100%;        
+      		width:100%;        
 		}		
 }
 

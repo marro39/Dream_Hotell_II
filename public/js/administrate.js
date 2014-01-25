@@ -1,5 +1,7 @@
 $(document).ready(function(){	
-/***********************************DELETE BOOKING***********************************************/	
+	var uploadPic=document.getElementById('uploadPicStatus');
+	alert(uploadPic.id);
+	/***********************************DELETE BOOKING**********************************************************************************************************************/	
 	$('#delete_booking').click(function(){				
 		$('#delete_booking_wrapper').slideDown(function(){							
 			$('#upload_pic_wrapper').css('display','none');				
@@ -88,7 +90,7 @@ $(document).ready(function(){
 			}}							
 		});			
 	});
-/**************************UPLOAD PICTURE****************************************************/
+/**************************UPLOAD PICTURE***************************************************************************************************************************************/
 	$('#uploadPictureAdmin').click(function(){		
 		$('#delete_booking_wrapper').css('display','none');		
 		$('#upload_pic_wrapper').slideDown(function(){						
