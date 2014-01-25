@@ -1,18 +1,28 @@
 $(document).ready(function(){	
 	var uploadPic=document.getElementById('uploadPicStatus');
 	if(uploadPic.innerHTML==''){
-		alert('Empty');
+		uploadPic.style.color='white';
+		//alert('Empty');
 	}
 	else if(uploadPic.innerHTML=='Success! File uploaded!'){
-		alert('Success!');
+		//alert('Success!');
+		uploadPic.style.color='green';
 	}
 	else{
-		alert('Error!');
+		//alert('Error!');
+		uploadPic.style.color='red';
 	}
+	var picStatusInterval=setInterval(function(){
+		uploadPic.innerHTML=='';
+		clearInterval(picStatusInterval);
+	},3000);
+	
 		
 	alert(uploadPic.id);
 	/***********************************DELETE BOOKING**********************************************************************************************************************/	
-	$('#delete_booking').click(function(){				
+	$('#delete_booking').click(function(){
+		//Clear uploadPicData from UPLOAD PICTURE section in this file!
+		uploadPic.innerHTML='';
 		$('#delete_booking_wrapper').slideDown(function(){							
 			$('#upload_pic_wrapper').css('display','none');				
 			//Google crome and Opera 			
