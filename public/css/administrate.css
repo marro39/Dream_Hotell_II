@@ -289,7 +289,7 @@ ul#menulistAdmin li:hover a:hover{
 #upload_pic_wrapper{                
         width:99%;
         height:500px;        
-        border:1px solid #008000;
+        /*border:1px solid #008000;*/
         display:none;        
         background-color:#000000; 
         padding:0%;
