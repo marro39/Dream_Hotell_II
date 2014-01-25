@@ -114,9 +114,7 @@
 				</tbody>
 					
 			</table>
-			<p>Please name files as the last file in each category,<br />
-				add +1 for pic number.<br />
-				An example: ceasars_palace_extX</p>							
+			<p>Please name files as the last file in each category,	add +1 for pic number(ceasars_palace_extX)</p>							
 			<p>In the select option choose which folder you want to put the picture in.</p>			
 			<?php
 				//echo $error;			

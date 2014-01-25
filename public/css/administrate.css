@@ -318,6 +318,9 @@ ul#menulistAdmin li:hover a:hover{
         font-style:italic;
         font-weight:normal; 	
 }
+#upload_pic_wrapper p{
+	font-style:italic;
+}
 #tablePicInformationAdmin{
 		/*-------------Crome, Opera,Explorer, Firefox and W3C------*/
 		display: flex;
@@ -346,11 +349,11 @@ ul#menulistAdmin li:hover a:hover{
 }
 #tablePicInformationAdmin tr:nth-child(even){
 	/*background-color: #0F0F0F;*/
-	background-color: #484848;
+	background-color: #282828;
 }
 #tablePicInformationAdmin thead tr:first-child{
 	/*background-color: #0F0F0F;*/
-	background-color: #484848;	
+	background-color: #282828;	
 }
 #upload_pic_wrapper form{
 		/*-------------Google crome and Opera---------*/
