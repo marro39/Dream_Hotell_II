@@ -39,6 +39,8 @@ $(document).ready(function(){
 	$('.liMainMenu').hover(function(){		
 		if($(this).find('a').data('menuClicked')==false){			
 			$(this).find(' > a').css('color','#FBCB09').css('font-weight','bold');
+			$(this).find(' > a').css('box-shadow', 'inset 0% 100% 3px rgba(0,0,0,0.3)');
+			//$(this).find(' > a').css('box-shadow', 'inset 0% 100% 3px rgba(0,0,0,0.3)');
 		}				
 		$(this).find('ul').css('display','block');
 		//alert('Hover');
