@@ -66,7 +66,7 @@
 						</ul>
 					</li>
 					<li>
-						<a href="#">Upload</a>
+						<a href="#">Upload <span class="downArrow">&#9660;</span></a>
 						<ul class="subOne">
 							<li><a href="#" id="uploadPictureAdmin">Upload pic</a></li>						
 						</ul>
@@ -93,7 +93,7 @@
 					<tbody>					
 					</tbody>
 				</table>	
-				<button type="input" id="adminDeleteBooking">Delete booking</button>						
+				<input type="button" id="adminDeleteBooking">Delete booking</button>						
 			</div>
 			<div id="confDelBooking" title="Delete booking">
 				<p>Are you sure you want to delete selected booking?</p>			
