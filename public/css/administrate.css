@@ -314,7 +314,9 @@ ul#menulistAdmin li:hover a:hover{
 			display: flex;        	
         	flex-direction:column;        
         	justify-content:start;
-        	align-items:center; 	
+        	align-items:center;
+        font-style:italic;
+        font-weight:normal; 	
 }
 #tablePicInformationAdmin{
 		/*-------------Crome, Opera,Explorer, Firefox and W3C------*/
@@ -343,10 +345,12 @@ ul#menulistAdmin li:hover a:hover{
 		/*border:1px solid red;*/
 }
 #tablePicInformationAdmin tr:nth-child(even){
-	background-color: #0F0F0F;
+	/*background-color: #0F0F0F;*/
+	background-color: #484848;
 }
 #tablePicInformationAdmin thead tr:first-child{
-	background-color: #0F0F0F;	
+	/*background-color: #0F0F0F;*/
+	background-color: #484848;	
 }
 #upload_pic_wrapper form{
 		/*-------------Google crome and Opera---------*/
